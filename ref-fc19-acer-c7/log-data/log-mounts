@@ -1,0 +1,29 @@
+rootfs    on /    type rootfs   (rw)
+/dev/root on /    type ext2     (ro,relatime,user_xattr,acl)
+devtmpfs  on /dev type devtmpfs (rw,nosuid,noexec,relatime,size=1000880k,nr_inodes=250220,mode=755)
+
+none    on /proc    type proc  (rw,nosuid,nodev,noexec,relatime)
+none    on /sys     type sysfs (rw,nosuid,nodev,noexec,relatime)
+tmp     on /tmp     type tmpfs (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+shmfs   on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime)
+devpts  on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620)
+
+/dev/sda1 on /mnt/stateful_partition type ext4 (rw,nosuid,nodev,noexec,relatime,commit=600,data=ordered)
+/dev/sda8 on /usr/share/oem          type ext4 (ro,nosuid,nodev,noexec,relatime,commit=600,data=ordered)
+/dev/sda1 on /home                   type ext4 (rw,nosuid,nodev,noexec,relatime,commit=600,data=ordered)
+/dev/sda1 on /usr/local              type ext4 (rw,nodev,relatime,commit=600,data=ordered)
+
+/dev/mapper/encstateful on /mnt/stateful_partition/encrypted type ext4 (rw,nosuid,nodev,noexec,relatime,discard,commit=600,data=ordered)
+/dev/mapper/encstateful on /var          type ext4 (rw,nosuid,nodev,noexec,relatime,discard,commit=600,data=ordered)
+/dev/mapper/encstateful on /home/chronos type ext4 (rw,nosuid,nodev,noexec,relatime,discard,commit=600,data=ordered)
+
+varrun  on /var/run  type tmpfs (rw,nosuid,nodev,noexec,relatime,mode=755)
+varlock on /var/lock type tmpfs (rw,nosuid,nodev,noexec,relatime)
+media   on /media    type tmpfs (rw,nosuid,nodev,noexec,relatime)
+
+
+none    on /sys/fs/cgroup     type tmpfs  (rw,nosuid,nodev,noexec,relatime,mode=755)
+none    on /dev/pstore        type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup  on /sys/fs/cgroup/cpu type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)

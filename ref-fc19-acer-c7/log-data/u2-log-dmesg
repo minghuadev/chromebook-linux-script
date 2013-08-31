@@ -1,0 +1,1691 @@
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.4.0 (chrome-bot@build76-m2) (gcc version 4.7.x-google 20120720 (prerelease) (4.7.1_cos_gg_164c96f) ) #1 SMP Wed Feb 27 13:28:20 PST 2013
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000]  BIOS-e820: 0000000000000000 - 0000000000001000 type 16
+[    0.000000]  BIOS-e820: 0000000000001000 - 00000000000a0000 (usable)
+[    0.000000]  BIOS-e820: 00000000000a0000 - 0000000000100000 (reserved)
+[    0.000000]  BIOS-e820: 0000000000100000 - 0000000000f00000 (usable)
+[    0.000000]  BIOS-e820: 0000000000f00000 - 0000000001000000 (reserved)
+[    0.000000]  BIOS-e820: 0000000001000000 - 0000000020000000 (usable)
+[    0.000000]  BIOS-e820: 0000000020000000 - 0000000020200000 (reserved)
+[    0.000000]  BIOS-e820: 0000000020200000 - 0000000040000000 (usable)
+[    0.000000]  BIOS-e820: 0000000040000000 - 0000000040200000 (reserved)
+[    0.000000]  BIOS-e820: 0000000040200000 - 000000007bec0000 (usable)
+[    0.000000]  BIOS-e820: 000000007bec0000 - 000000007c000000 type 16
+[    0.000000]  BIOS-e820: 000000007c000000 - 000000007ea00000 (reserved)
+[    0.000000]  BIOS-e820: 00000000f0000000 - 00000000f4000000 (reserved)
+[    0.000000]  BIOS-e820: 0000000100000000 - 0000000100600000 (usable)
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] DMI present.
+[    0.000000] DMI: GOOGLE Parrot, BIOS Google_Parrot.2685.37.0 09/10/2012
+[    0.000000] e820 update range: 0000000000000000 - 0000000000010000 (usable) ==> (reserved)
+[    0.000000] e820 remove range: 00000000000a0000 - 0000000000100000 (usable)
+[    0.000000] last_pfn = 0x100600 max_arch_pfn = 0x1000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-FFFFF uncachable
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 000000000 mask FC0000000 write-back
+[    0.000000]   1 base 040000000 mask FE0000000 write-back
+[    0.000000]   2 base 060000000 mask FF0000000 write-back
+[    0.000000]   3 base 070000000 mask FF8000000 write-back
+[    0.000000]   4 base 078000000 mask FFC000000 write-back
+[    0.000000]   5 base 100000000 mask FFFC00000 write-back
+[    0.000000]   6 base 100400000 mask FFFE00000 write-back
+[    0.000000]   7 disabled
+[    0.000000]   8 disabled
+[    0.000000]   9 disabled
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] e820 update range: 000000007c000000 - 0000000100000000 (usable) ==> (reserved)
+[    0.000000] initial memory mapped : 0 - 02000000
+[    0.000000] Base memory trampoline at [8009c000] 9c000 size 16384
+[    0.000000] init_memory_mapping: 0000000000000000-0000000077bfe000
+[    0.000000]  0000000000 - 0000200000 page 4k
+[    0.000000]  0000200000 - 0077a00000 page 2M
+[    0.000000]  0077a00000 - 0077bfe000 page 4k
+[    0.000000] kernel direct mapping tables up to 77bfe000 @ 1ffa000-2000000
+[    0.000000] ACPI: RSDP 000f0000 00024 (v02 CORE  )
+[    0.000000] ACPI: XSDT 7bed12e0 0004C (v01 CORE   COREBOOT 00000000 CORE 00000000)
+[    0.000000] ACPI: FACP 7bed4530 000F4 (v03 CORE   COREBOOT 00000000 CORE 00000001)
+[    0.000000] ACPI: DSDT 7bed1450 030E0 (v02 COREv4 COREBOOT 20110725 INTL 20090123)
+[    0.000000] ACPI: FACS 7bed1410 00040
+[    0.000000] ACPI: HPET 7bed4630 00038 (v01 CORE   COREBOOT 00000000 CORE 00000000)
+[    0.000000] ACPI: APIC 7bed4670 0005C (v01 CORE   COREBOOT 00000000 CORE 00000000)
+[    0.000000] ACPI: MCFG 7bed46d0 0003C (v01 CORE   COREBOOT 00000000 CORE 00000000)
+[    0.000000] ACPI: SSDT 7bed55c0 00818 (v02 CORE   COREBOOT 0000002A CORE 0000002A)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] 2186MB HIGHMEM available.
+[    0.000000] 1915MB LOWMEM available.
+[    0.000000]   mapped low ram: 0 - 77bfe000
+[    0.000000]   low ram: 0 - 77bfe000
+[    0.000000] Zone PFN ranges:
+[    0.000000]   DMA      0x00000010 -> 0x00001000
+[    0.000000]   Normal   0x00001000 -> 0x00077bfe
+[    0.000000]   HighMem  0x00077bfe -> 0x00100600
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] Early memory PFN ranges
+[    0.000000]     0: 0x00000010 -> 0x000000a0
+[    0.000000]     0: 0x00000100 -> 0x00000f00
+[    0.000000]     0: 0x00001000 -> 0x00020000
+[    0.000000]     0: 0x00020200 -> 0x00040000
+[    0.000000]     0: 0x00040200 -> 0x0007bec0
+[    0.000000]     0: 0x00100000 -> 0x00100600
+[    0.000000] On node 0 totalpages: 507728
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 3696 pages, LIFO batch:0
+[    0.000000]   Normal zone: 3800 pages used for memmap
+[    0.000000]   Normal zone: 481574 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 4373 pages used for memmap
+[    0.000000]   HighMem zone: 14253 pages, LIFO batch:3
+[    0.000000] Using APIC driver default
+[    0.000000] ACPI: PM-Timer IO Port: 0x508
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x02] enabled)
+[    0.000000] ACPI: IOAPIC (id[0x02] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ2 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] SMP: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.000000] nr_irqs_gsi: 40
+[    0.000000] Allocating PCI resources starting at 7ea00000 (gap: 7ea00000:71600000)
+[    0.000000] setup_percpu: NR_CPUS:4 nr_cpumask_bits:4 nr_cpu_ids:2 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 13 pages/cpu @f67bc000 s29760 r0 d23488 u53248
+[    0.000000] pcpu-alloc: s29760 r0 d23488 u53248 alloc=13*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 499523
+[    0.000000] Kernel command line: cros_secure  loglevel=7 console= init=/sbin/init cros_secure root=/dev/dm-0 rootwait ro dm_verity.error_behavior=3 dm_verity.max_bios=-1 dm_verity.dev_wait=1 dm="1 vroot none ro 1,0 2097152 verity payload=d27d+1 hashtree=d27d+1 hashstart=2097152 alg=sha1 root_hexdigest=2ad0035298bc35e0d2bfd2bf3abc5dffe7c06d19 salt=074eb2c1f8e95862596b78496c33860ea913c2bd1dfab4f4cf44b52850828b40" noinitrd vt.global_cursor_default=0 kern_guid=d27d add_efi_memmap boot=local noresume noswap i915.modeset=1 tpm_tis.force=1 tpm_tis.interrupts=0 nmi_watchdog=panic,lapic 
+[    0.000000] device-mapper: init: will configure 1 devices
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Initializing CPU#0
+[    0.000000] xsave/xrstor: enabled xstate_bv 0x3, cntxt size 0x240
+[    0.000000] Initializing HighMem for node 0 (00077bfe:00100600)
+[    0.000000] Memory: 2001760k/4200448k available (3856k kernel code, 1824k data, 460k init, 74504k highmem)
+[    0.000000] virtual kernel memory layout:
+[    0.000000]     fixmap  : 0xfff66000 - 0xfffff000   ( 612 kB)
+[    0.000000]     pkmap   : 0xffc00000 - 0xffe00000   (2048 kB)
+[    0.000000]     vmalloc : 0xf83fe000 - 0xffbfe000   ( 120 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0xf7bfe000   (1915 MB)
+[    0.000000]       .init : 0x8158d000 - 0x81600000   ( 460 kB)
+[    0.000000]       .data : 0x813c432c - 0x8158c5e0   (1824 kB)
+[    0.000000]       .text : 0x81000000 - 0x813c432c   (3856 kB)
+[    0.000000] Checking if this processor honours the WP bit even in supervisor mode...Ok.
+[    0.000000] SLUB: Genslabs=15, HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:2304 nr_irqs:512 16
+[    0.000000] CPU 0 irqstacks, hard=f6008000 soft=f600a000
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] hpet clockevent registered
+[    0.000000] Initial TSC value: 36888632544
+[    0.000000] Fast TSC calibration using PIT
+[    0.001000] Initial usec timer 33626830
+[    0.001000] Detected 1097.417 MHz processor.
+[    0.000002] Calibrating delay loop (skipped), value calculated using timer frequency.. 2194.83 BogoMIPS (lpj=1097417)
+[    0.000010] pid_max: default: 32768 minimum: 301
+[    0.000052] Security Framework initialized
+[    0.000070] Yama: becoming mindful.
+[    0.000103] Mount-cache hash table entries: 512
+[    0.000458] CPU: Physical Processor ID: 0
+[    0.000461] CPU: Processor Core ID: 0
+[    0.000470] mce: CPU supports 7 MCE banks
+[    0.000492] CPU0: Thermal monitoring enabled (TM1)
+[    0.000503] using mwait in idle threads.
+[    0.000642] ACPI: Core revision 20120320
+[    0.005367] acpi_enable!
+[    0.006425] ACPI mode enable smi_command = 0xb2 val = 0xe1
+[    0.006432] ftrace: allocating 19952 entries in 39 pages
+[    0.031071] Enabling APIC mode:  Flat.  Using 1 I/O APICs
+[    0.031531] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.041534] CPU0: Intel(R) Celeron(R) CPU 847 @ 1.10GHz stepping 07
+[    0.143062] Performance Events: PEBS fmt1+, 16-deep LBR, SandyBridge events, Intel PMU driver.
+[    0.143074] PEBS disabled due to CPU errata.
+[    0.143079] ... version:                3
+[    0.143082] ... bit width:              48
+[    0.143084] ... generic registers:      8
+[    0.143087] ... value mask:             0000ffffffffffff
+[    0.143090] ... max period:             000000007fffffff
+[    0.143093] ... fixed-purpose events:   3
+[    0.143096] ... event mask:             00000007000000ff
+[    0.143296] NMI watchdog: enabled, takes one hw-pmu counter.
+[    0.143424] CPU 1 irqstacks, hard=f60c6000 soft=f60c8000
+[    0.143427] Booting Node   0, Processors  #1 Ok.
+[    0.153767] Initializing CPU#1
+[    0.156584] NMI watchdog: enabled, takes one hw-pmu counter.
+[    0.156628] Brought up 2 CPUs
+[    0.156632] Total of 2 processors activated (4389.66 BogoMIPS).
+[    0.158769] devtmpfs: initialized
+[    0.161370] RTC time:  0:56:43, date: 08/25/13
+[    0.161447] NET: Registered protocol family 16
+[    0.162441] ACPI: bus type pci registered
+[    0.162506] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf0000000-0xf3ffffff] (base 0xf0000000)
+[    0.162513] PCI: MMCONFIG at [mem 0xf0000000-0xf3ffffff] reserved in E820
+[    0.162516] PCI: Using MMCONFIG for extended config space
+[    0.162519] PCI: Using configuration type 1 for base access
+[    0.164730] bio: create slab <bio-0> at 0
+[    0.164844] ACPI: Added _OSI(Module Device)
+[    0.164848] ACPI: Added _OSI(Processor Device)
+[    0.164852] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.164856] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.166560] ACPI: EC: Look up EC in DSDT
+[    0.170810] ACPI: Interpreter enabled
+[    0.170820] ACPI: (supports S0 S3 S5)
+[    0.170851] ACPI: Using IOAPIC for interrupt routing
+[    0.176617] ACPI: EC: GPE = 0x17, I/O: command/status = 0x66, data = 0x62
+[    0.176836] ACPI: No dock devices found.
+[    0.176842] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.177005] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.177202] pci_root PNP0A08:00: host bridge window [io  0x0000-0x0cf7]
+[    0.177207] pci_root PNP0A08:00: host bridge window [io  0x0d00-0xffff]
+[    0.177212] pci_root PNP0A08:00: host bridge window [mem 0x000a0000-0x000bffff]
+[    0.177216] pci_root PNP0A08:00: host bridge window [mem 0x000c0000-0x000c3fff]
+[    0.177221] pci_root PNP0A08:00: host bridge window [mem 0x000c4000-0x000c7fff]
+[    0.177225] pci_root PNP0A08:00: host bridge window [mem 0x000c8000-0x000cbfff]
+[    0.177229] pci_root PNP0A08:00: host bridge window [mem 0x000cc000-0x000cffff]
+[    0.177233] pci_root PNP0A08:00: host bridge window [mem 0x000d0000-0x000d3fff]
+[    0.177237] pci_root PNP0A08:00: host bridge window [mem 0x000d4000-0x000d7fff]
+[    0.177242] pci_root PNP0A08:00: host bridge window [mem 0x000d8000-0x000dbfff]
+[    0.177246] pci_root PNP0A08:00: host bridge window [mem 0x000dc000-0x000dffff]
+[    0.177250] pci_root PNP0A08:00: host bridge window [mem 0x000e0000-0x000e3fff]
+[    0.177254] pci_root PNP0A08:00: host bridge window [mem 0x000e4000-0x000e7fff]
+[    0.177258] pci_root PNP0A08:00: host bridge window [mem 0x000e8000-0x000ebfff]
+[    0.177263] pci_root PNP0A08:00: host bridge window [mem 0x000ec000-0x000effff]
+[    0.177267] pci_root PNP0A08:00: host bridge window [mem 0x000f0000-0x000fffff]
+[    0.177271] pci_root PNP0A08:00: host bridge window [mem 0x7ea00001-0xfebfffff]
+[    0.177276] pci_root PNP0A08:00: host bridge window [mem 0xfed40000-0xfed44fff]
+[    0.177293] pci_root PNP0A08:00: ignoring host bridge window [mem 0x000cc000-0x000cffff] (conflicts with Video ROM [mem 0x000c0000-0x000cedff])
+[    0.177349] PCI host bridge to bus 0000:00
+[    0.177354] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    0.177358] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+[    0.177362] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    0.177366] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff]
+[    0.177371] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff]
+[    0.177375] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff]
+[    0.177379] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff]
+[    0.177383] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff]
+[    0.177387] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff]
+[    0.177391] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff]
+[    0.177395] pci_bus 0000:00: root bus resource [mem 0x000e0000-0x000e3fff]
+[    0.177400] pci_bus 0000:00: root bus resource [mem 0x000e4000-0x000e7fff]
+[    0.177404] pci_bus 0000:00: root bus resource [mem 0x000e8000-0x000ebfff]
+[    0.177408] pci_bus 0000:00: root bus resource [mem 0x000ec000-0x000effff]
+[    0.177412] pci_bus 0000:00: root bus resource [mem 0x000f0000-0x000fffff]
+[    0.177416] pci_bus 0000:00: root bus resource [mem 0x7ea00001-0xfebfffff]
+[    0.177421] pci_bus 0000:00: root bus resource [mem 0xfed40000-0xfed44fff]
+[    0.177438] pci 0000:00:00.0: [8086:0104] type 00 class 0x060000
+[    0.177510] pci 0000:00:02.0: [8086:0106] type 00 class 0x030000
+[    0.177533] pci 0000:00:02.0: reg 10: [mem 0xe0000000-0xe03fffff 64bit]
+[    0.177547] pci 0000:00:02.0: reg 18: [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.177557] pci 0000:00:02.0: reg 20: [io  0x1000-0x103f]
+[    0.177684] pci 0000:00:1a.0: [8086:1e2d] type 00 class 0x0c0320
+[    0.177724] pci 0000:00:1a.0: reg 10: [mem 0xe0705800-0xe0705bff]
+[    0.177897] pci 0000:00:1a.0: PME# supported from D0 D3hot D3cold
+[    0.177949] pci 0000:00:1b.0: [8086:1e20] type 00 class 0x040300
+[    0.177983] pci 0000:00:1b.0: reg 10: [mem 0xe0700000-0xe0703fff 64bit]
+[    0.178140] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    0.178184] pci 0000:00:1c.0: [8086:1e12] type 01 class 0x060400
+[    0.178345] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    0.178393] pci 0000:00:1c.1: [8086:1e14] type 01 class 0x060400
+[    0.178554] pci 0000:00:1c.1: PME# supported from D0 D3hot D3cold
+[    0.178621] pci 0000:00:1d.0: [8086:1e26] type 00 class 0x0c0320
+[    0.178662] pci 0000:00:1d.0: reg 10: [mem 0xe0705c00-0xe0705fff]
+[    0.178833] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    0.178878] pci 0000:00:1f.0: [8086:1e5f] type 00 class 0x060100
+[    0.179100] pci 0000:00:1f.2: [8086:1e03] type 00 class 0x010601
+[    0.179143] pci 0000:00:1f.2: reg 10: [io  0x1060-0x1067]
+[    0.179162] pci 0000:00:1f.2: reg 14: [io  0x1070-0x1073]
+[    0.179180] pci 0000:00:1f.2: reg 18: [io  0x1068-0x106f]
+[    0.179198] pci 0000:00:1f.2: reg 1c: [io  0x1074-0x1077]
+[    0.179217] pci 0000:00:1f.2: reg 20: [io  0x1040-0x105f]
+[    0.179235] pci 0000:00:1f.2: reg 24: [mem 0xe0705000-0xe07057ff]
+[    0.179343] pci 0000:00:1f.2: PME# supported from D3hot
+[    0.179382] pci 0000:00:1f.3: [8086:1e22] type 00 class 0x0c0500
+[    0.179416] pci 0000:00:1f.3: reg 10: [mem 0xe0706000-0xe07060ff 64bit]
+[    0.179464] pci 0000:00:1f.3: reg 20: [io  0x0400-0x041f]
+[    0.179537] pci 0000:00:1f.6: [8086:1e24] type 00 class 0x118000
+[    0.179577] pci 0000:00:1f.6: reg 10: [mem 0xe0704000-0xe0704fff 64bit]
+[    0.179850] pci 0000:01:00.0: [168c:0034] type 00 class 0x028000
+[    0.179917] pci 0000:01:00.0: reg 10: [mem 0xe0400000-0xe047ffff 64bit]
+[    0.180079] pci 0000:01:00.0: reg 30: [mem 0xe0480000-0xe048ffff pref]
+[    0.180241] pci 0000:01:00.0: supports D1 D2
+[    0.180245] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.182094] pci 0000:00:1c.0: PCI bridge to [bus 01-01]
+[    0.182110] pci 0000:00:1c.0:   bridge window [mem 0xe0400000-0xe04fffff]
+[    0.182293] pci 0000:02:00.0: [14e4:16b5] type 00 class 0x020000
+[    0.182362] pci 0000:02:00.0: reg 10: [mem 0xe0500000-0xe050ffff 64bit pref]
+[    0.182417] pci 0000:02:00.0: reg 18: [mem 0xe0510000-0xe051ffff 64bit pref]
+[    0.182517] pci 0000:02:00.0: reg 30: [mem 0xe0600000-0xe06007ff pref]
+[    0.182708] pci 0000:02:00.0: PME# supported from D0 D3hot D3cold
+[    0.182836] pci 0000:02:00.1: [14e4:16bc] type 00 class 0x080501
+[    0.182905] pci 0000:02:00.1: reg 10: [mem 0xe0520000-0xe052ffff 64bit pref]
+[    0.183237] pci 0000:02:00.1: PME# supported from D0 D3hot D3cold
+[    0.185111] pci 0000:00:1c.1: PCI bridge to [bus 02-02]
+[    0.185126] pci 0000:00:1c.1:   bridge window [mem 0xe0600000-0xe06fffff]
+[    0.185142] pci 0000:00:1c.1:   bridge window [mem 0xe0500000-0xe05fffff 64bit pref]
+[    0.185171] pci_bus 0000:00: on NUMA node 0
+[    0.185187] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+[    0.185389] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP01._PRT]
+[    0.185826] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.RP02._PRT]
+[    0.186340]  pci0000:00: Requesting ACPI _OSC control (0x1d)
+[    0.186388]  pci0000:00: ACPI _OSC control (0x1d) granted
+[    0.190285] ACPI: PCI Interrupt Link [LNKA] (IRQs 1 3 4 5 6 7 10 12 14 15) *11, disabled.
+[    0.190366] ACPI: PCI Interrupt Link [LNKB] (IRQs 1 3 4 5 6 7 11 12 14 15) *10, disabled.
+[    0.190442] ACPI: PCI Interrupt Link [LNKC] (IRQs 1 3 4 5 6 7 10 12 14 15) *11, disabled.
+[    0.190517] ACPI: PCI Interrupt Link [LNKD] (IRQs 1 3 4 5 6 7 *11 12 14 15), disabled.
+[    0.190591] ACPI: PCI Interrupt Link [LNKE] (IRQs 1 3 4 5 6 7 10 12 14 15) *11, disabled.
+[    0.190664] ACPI: PCI Interrupt Link [LNKF] (IRQs 1 3 4 5 6 7 11 12 14 15) *0, disabled.
+[    0.190738] ACPI: PCI Interrupt Link [LNKG] (IRQs 1 3 4 5 6 7 10 12 14 15) *0, disabled.
+[    0.190811] ACPI: PCI Interrupt Link [LNKH] (IRQs 1 3 4 5 6 7 11 12 14 15) *0, disabled.
+[    0.190996] SCSI subsystem initialized
+[    0.191053] libata version 3.00 loaded.
+[    0.191119] usbcore: registered new interface driver usbfs
+[    0.191142] usbcore: registered new interface driver hub
+[    0.191183] usbcore: registered new device driver usb
+[    0.191354] chromeos_acpi: registering CHSW 0
+[    0.191634] chromeos_acpi: registering VBNV 0
+[    0.191639] chromeos_acpi: registering VBNV 1
+[    0.192088] chromeos_acpi: truncating buffer from 3072 to 1336
+[    0.192432] chromeos_acpi: installed
+[    0.192472] Advanced Linux Sound Architecture Driver Version 1.0.25.
+[    0.192475] PCI: Using ACPI for IRQ routing
+[    0.196220] PCI: pci_cache_line_size set to 64 bytes
+[    0.196344] reserve RAM buffer: 000000007bec0000 - 000000007bffffff 
+[    0.196349] reserve RAM buffer: 0000000100600000 - 0000000103ffffff 
+[    0.196480] RTM_NEWLINK: idx=1, flags=0x8, deliver=0, fail=0, congest=0
+[    0.196505] RTM_NEWLINK: idx=131083, flags=0x74636C6E, deliver=0, fail=0, congest=0
+[    0.196975] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    0.196987] hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+[    0.199018] Switching to clocksource hpet
+[    0.211711] RTM_NEWLINK: idx=131087, flags=0x69706361, deliver=0, fail=0, congest=0
+[    0.211721] RTM_NEWLINK: idx=131087, flags=0x69706361, deliver=0, fail=0, congest=0
+[    0.211744] pnp: PnP ACPI init
+[    0.211763] ACPI: bus type pnp registered
+[    0.211819] pnp 00:00: [irq 16]
+[    0.211828] pnp 00:00: [irq 20]
+[    0.211883] pnp 00:00: Plug and Play ACPI device, IDs PNP0c0e (active)
+[    0.212021] pnp 00:01: [bus 00-ff]
+[    0.212026] pnp 00:01: [io  0x0000-0x0cf7 window]
+[    0.212030] pnp 00:01: [io  0x0cf8-0x0cff]
+[    0.212033] pnp 00:01: [io  0x0d00-0xffff window]
+[    0.212052] pnp 00:01: [mem 0x000a0000-0x000bffff window]
+[    0.212056] pnp 00:01: [mem 0x000c0000-0x000c3fff window]
+[    0.212060] pnp 00:01: [mem 0x000c4000-0x000c7fff window]
+[    0.212063] pnp 00:01: [mem 0x000c8000-0x000cbfff window]
+[    0.212067] pnp 00:01: [mem 0x000cc000-0x000cffff window]
+[    0.212071] pnp 00:01: [mem 0x000d0000-0x000d3fff window]
+[    0.212075] pnp 00:01: [mem 0x000d4000-0x000d7fff window]
+[    0.212079] pnp 00:01: [mem 0x000d8000-0x000dbfff window]
+[    0.212082] pnp 00:01: [mem 0x000dc000-0x000dffff window]
+[    0.212086] pnp 00:01: [mem 0x000e0000-0x000e3fff window]
+[    0.212090] pnp 00:01: [mem 0x000e4000-0x000e7fff window]
+[    0.212094] pnp 00:01: [mem 0x000e8000-0x000ebfff window]
+[    0.212097] pnp 00:01: [mem 0x000ec000-0x000effff window]
+[    0.212101] pnp 00:01: [mem 0x000f0000-0x000fffff window]
+[    0.212105] pnp 00:01: [mem 0x7ea00001-0xfebfffff window]
+[    0.212109] pnp 00:01: [mem 0xfed40000-0xfed44fff window]
+[    0.212180] pnp 00:01: Plug and Play ACPI device, IDs PNP0a08 PNP0a03 (active)
+[    0.212215] pnp 00:02: [mem 0xfed1c000-0xfed1ffff]
+[    0.212218] pnp 00:02: [mem 0xfed10000-0xfed13fff]
+[    0.212222] pnp 00:02: [mem 0xfed18000-0xfed18fff]
+[    0.212225] pnp 00:02: [mem 0xfed19000-0xfed19fff]
+[    0.212229] pnp 00:02: [mem 0xf0000000-0xf3ffffff]
+[    0.212232] pnp 00:02: [mem 0xfed20000-0xfed3ffff]
+[    0.212236] pnp 00:02: [mem 0xfed40000-0xfed44fff]
+[    0.212239] pnp 00:02: [mem 0xfed45000-0xfed8ffff]
+[    0.212243] pnp 00:02: [mem 0x00f00000-0x00ffffff]
+[    0.212247] pnp 00:02: [mem 0x20000000-0x201fffff]
+[    0.212250] pnp 00:02: [mem 0x40000000-0x401fffff]
+[    0.212321] system 00:02: [mem 0xfed1c000-0xfed1ffff] has been reserved
+[    0.212326] system 00:02: [mem 0xfed10000-0xfed13fff] has been reserved
+[    0.212332] system 00:02: [mem 0xfed18000-0xfed18fff] has been reserved
+[    0.212336] system 00:02: [mem 0xfed19000-0xfed19fff] has been reserved
+[    0.212342] system 00:02: [mem 0xf0000000-0xf3ffffff] has been reserved
+[    0.212346] system 00:02: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    0.212351] system 00:02: [mem 0xfed40000-0xfed44fff] has been reserved
+[    0.212356] system 00:02: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    0.212361] system 00:02: [mem 0x00f00000-0x00ffffff] has been reserved
+[    0.212366] system 00:02: [mem 0x20000000-0x201fffff] has been reserved
+[    0.212370] system 00:02: [mem 0x40000000-0x401fffff] has been reserved
+[    0.212376] system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.212883] pnp 00:03: [io  0x0000-0x001f]
+[    0.212887] pnp 00:03: [io  0x0081-0x0091]
+[    0.212890] pnp 00:03: [io  0x0093-0x009f]
+[    0.212893] pnp 00:03: [io  0x00c0-0x00df]
+[    0.212897] pnp 00:03: [dma 4]
+[    0.212953] pnp 00:03: Plug and Play ACPI device, IDs PNP0200 (active)
+[    0.212968] pnp 00:04: [mem 0xff000000-0xffffffff]
+[    0.213020] pnp 00:04: Plug and Play ACPI device, IDs INT0800 (active)
+[    0.213148] pnp 00:05: [mem 0xfed00000-0xfed003ff]
+[    0.213227] system 00:05: [mem 0xfed00000-0xfed003ff] has been reserved
+[    0.213233] system 00:05: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)
+[    0.213252] pnp 00:06: [io  0x00f0]
+[    0.213262] pnp 00:06: [irq 13]
+[    0.213318] pnp 00:06: Plug and Play ACPI device, IDs PNP0c04 (active)
+[    0.213336] pnp 00:07: [io  0x002e-0x002f]
+[    0.213339] pnp 00:07: [io  0x004e-0x004f]
+[    0.213342] pnp 00:07: [io  0x0061]
+[    0.213345] pnp 00:07: [io  0x0063]
+[    0.213348] pnp 00:07: [io  0x0065]
+[    0.213351] pnp 00:07: [io  0x0067]
+[    0.213354] pnp 00:07: [io  0x0080]
+[    0.213357] pnp 00:07: [io  0x0092]
+[    0.213360] pnp 00:07: [io  0x00b2-0x00b3]
+[    0.213363] pnp 00:07: [io  0x0500-0x057f]
+[    0.213366] pnp 00:07: [io  0x0480-0x04bf]
+[    0.213445] system 00:07: [io  0x0500-0x057f] has been reserved
+[    0.213450] system 00:07: [io  0x0480-0x04bf] has been reserved
+[    0.213455] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.213469] pnp 00:08: [io  0x0070-0x0077]
+[    0.213526] pnp 00:08: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.213557] pnp 00:09: [io  0x0060]
+[    0.213560] pnp 00:09: [io  0x0064]
+[    0.213568] pnp 00:09: [irq 1]
+[    0.213627] pnp 00:09: Plug and Play ACPI device, IDs PNP0303 PNP030b (active)
+[    0.213666] pnp: PnP ACPI: found 10 devices
+[    0.213669] ACPI: ACPI bus type pnp unregistered
+[    0.216621] RTM_NEWLINK: idx=131090, flags=0x72656874, deliver=0, fail=0, congest=0
+[    0.216630] RTM_NEWLINK: idx=131090, flags=0x72656874, deliver=0, fail=0, congest=0
+[    0.251222] pci 0000:00:1c.0: PCI bridge to [bus 01-01]
+[    0.251234] pci 0000:00:1c.0:   bridge window [mem 0xe0400000-0xe04fffff]
+[    0.251252] pci 0000:00:1c.1: PCI bridge to [bus 02-02]
+[    0.251262] pci 0000:00:1c.1:   bridge window [mem 0xe0600000-0xe06fffff]
+[    0.251271] pci 0000:00:1c.1:   bridge window [mem 0xe0500000-0xe05fffff 64bit pref]
+[    0.251319] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+[    0.251323] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+[    0.251327] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.251330] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff]
+[    0.251334] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff]
+[    0.251338] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff]
+[    0.251342] pci_bus 0000:00: resource 10 [mem 0x000d0000-0x000d3fff]
+[    0.251346] pci_bus 0000:00: resource 11 [mem 0x000d4000-0x000d7fff]
+[    0.251351] pci_bus 0000:00: resource 12 [mem 0x000d8000-0x000dbfff]
+[    0.251354] pci_bus 0000:00: resource 13 [mem 0x000dc000-0x000dffff]
+[    0.251358] pci_bus 0000:00: resource 14 [mem 0x000e0000-0x000e3fff]
+[    0.251362] pci_bus 0000:00: resource 15 [mem 0x000e4000-0x000e7fff]
+[    0.251366] pci_bus 0000:00: resource 16 [mem 0x000e8000-0x000ebfff]
+[    0.251370] pci_bus 0000:00: resource 17 [mem 0x000ec000-0x000effff]
+[    0.251374] pci_bus 0000:00: resource 18 [mem 0x000f0000-0x000fffff]
+[    0.251378] pci_bus 0000:00: resource 19 [mem 0x7ea00001-0xfebfffff]
+[    0.251382] pci_bus 0000:00: resource 20 [mem 0xfed40000-0xfed44fff]
+[    0.251387] pci_bus 0000:01: resource 1 [mem 0xe0400000-0xe04fffff]
+[    0.251391] pci_bus 0000:02: resource 1 [mem 0xe0600000-0xe06fffff]
+[    0.251395] pci_bus 0000:02: resource 2 [mem 0xe0500000-0xe05fffff 64bit pref]
+[    0.251476] NET: Registered protocol family 2
+[    0.251562] IP route cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.251786] TCP established hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.252706] TCP bind hash table entries: 65536 (order: 8, 1310720 bytes)
+[    0.253548] TCP: Hash tables configured (established 262144 bind 65536)
+[    0.253552] TCP: reno registered
+[    0.253558] UDP hash table entries: 1024 (order: 3, 49152 bytes)
+[    0.253599] UDP-Lite hash table entries: 1024 (order: 3, 49152 bytes)
+[    0.253737] NET: Registered protocol family 1
+[    0.253760] pci 0000:00:02.0: Boot video device
+[    0.253907] PCI: CLS 64 bytes, default 64
+[    0.254912] microcode: CPU0 sig=0x206a7, pf=0x10, revision=0x28
+[    0.254926] microcode: CPU1 sig=0x206a7, pf=0x10, revision=0x28
+[    0.254972] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    0.255549] highmem bounce pool size: 64 pages
+[    0.258825] msgmni has been set to 3764
+[    0.259267] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.259271] io scheduler noop registered
+[    0.259274] io scheduler deadline registered
+[    0.259323] io scheduler cfq registered (default)
+[    0.259501] pcieport 0000:00:1c.0: irq 40 for MSI/MSI-X
+[    0.259714] pcieport 0000:00:1c.1: irq 41 for MSI/MSI-X
+[    0.259886] pcieport 0000:00:1c.0: Signaling PME through PCIe PME interrupt
+[    0.259890] pci 0000:01:00.0: Signaling PME through PCIe PME interrupt
+[    0.259899] pcie_pme 0000:00:1c.0:pcie01: service driver pcie_pme loaded
+[    0.259933] pcieport 0000:00:1c.1: Signaling PME through PCIe PME interrupt
+[    0.259937] pci 0000:02:00.0: Signaling PME through PCIe PME interrupt
+[    0.259940] pci 0000:02:00.1: Signaling PME through PCIe PME interrupt
+[    0.259949] pcie_pme 0000:00:1c.1:pcie01: service driver pcie_pme loaded
+[    0.259973] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.260010] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    0.260685] ACPI: AC Adapter [AC] (on-line)
+[    0.260997] input: Lid Switch as /devices/LNXSYSTM:00/device:00/PNP0C0D:00/input/input0
+[    0.261192] ACPI: Lid Switch [LID0]
+[    0.261268] input: Power Button as /devices/LNXSYSTM:00/device:00/PNP0C0C:00/input/input1
+[    0.261275] ACPI: Power Button [PWRB]
+[    0.261346] input: Sleep Button as /devices/LNXSYSTM:00/device:00/PNP0C0E:00/input/input2
+[    0.261353] ACPI: Sleep Button [TPAD]
+[    0.261435] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+[    0.261440] ACPI: Power Button [PWRF]
+[    0.261970] input: Video Bus as /devices/LNXSYSTM:00/device:00/PNP0A08:00/LNXVIDEO:00/input/input4
+[    0.261978] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    0.262032] ACPI: Requesting acpi_cpufreq
+[    0.262370] Monitor-Mwait will be used to enter C-1 state
+[    0.262406] Monitor-Mwait will be used to enter C-2 state
+[    0.262440] Monitor-Mwait will be used to enter C-3 state
+[    0.262465] ACPI: acpi_idle registered with cpuidle
+[    0.267891] thermal LNXTHERM:00: registered as thermal_zone0
+[    0.267895] ACPI: Thermal Zone [THRM] (53 C)
+[    0.270947] Non-volatile memory driver v1.3
+[    0.271019] Linux agpgart interface v0.103
+[    0.271128] agpgart-intel 0000:00:00.0: Intel Sandybridge Chipset
+[    0.271270] agpgart-intel 0000:00:00.0: detected gtt size: 2097152K total, 262144K mappable
+[    0.272439] agpgart-intel 0000:00:00.0: detected 32768K stolen memory
+[    0.272626] agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0xd0000000
+[    0.272807] tpm_tis tpm_tis: 1.2 TPM (device-id 0xFE, rev-id 71)
+[    0.280780] [Firmware Bug]: battery: (dis)charge rate invalid.
+[    0.280856] ACPI: Battery Slot [BATX] (battery present)
+[    0.332514] console [pstore-1] enabled
+[    0.332553] [drm] Initialized drm 1.1.0 20060810
+[    0.332947] i915 0000:00:02.0: setting latency timer to 64
+[    0.367652] i915 0000:00:02.0: irq 42 for MSI/MSI-X
+[    0.367667] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+[    0.367678] [drm] Driver supports precise vblank timestamp query.
+[    0.694233] [drm] Enabling RC6 states: RC6 on, RC6p off, RC6pp off
+[    0.792950] fbcon: inteldrmfb (fb0) is primary device
+[    1.110820] Console: switching to colour frame buffer device 170x48
+[    1.119384] fb0: inteldrmfb frame buffer device
+[    1.119386] drm: registered panic notifier
+[    1.119409] [drm] Initialized i915 1.6.0 20080730 for 0000:00:02.0 on minor 0
+[    1.120616] loop: module loaded
+[    1.120695] ahci 0000:00:1f.2: version 3.0
+[    1.120782] ahci 0000:00:1f.2: irq 43 for MSI/MSI-X
+[    1.120830] ahci: SSS flag set, parallel bus scan disabled
+[    1.120869] ahci 0000:00:1f.2: AHCI 0001.0300 32 slots 4 ports 6 Gbps 0x1 impl SATA mode
+[    1.120884] ahci 0000:00:1f.2: flags: 64bit ncq sntf ilck stag pm led clo pio slum part apst 
+[    1.120902] ahci 0000:00:1f.2: setting latency timer to 64
+[    1.121467] scsi0 : ahci
+[    1.121602] scsi1 : ahci
+[    1.121708] scsi2 : ahci
+[    1.121813] scsi3 : ahci
+[    1.121957] ata1: SATA max UDMA/133 abar m2048@0xe0705000 port 0xe0705100 irq 43
+[    1.121969] ata2: DUMMY
+[    1.121974] ata3: DUMMY
+[    1.121979] ata4: DUMMY
+[    1.122212] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.122261] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+[    1.122266] ehci_hcd 0000:00:1a.0: EHCI Host Controller
+[    1.122365] ehci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 1
+[    1.122410] ehci_hcd 0000:00:1a.0: debug port 2
+[    1.126319] ehci_hcd 0000:00:1a.0: cache line size of 64 is not supported
+[    1.126345] ehci_hcd 0000:00:1a.0: irq 21, io mem 0xe0705800
+[    1.132042] ehci_hcd 0000:00:1a.0: USB 2.0 started, EHCI 1.00
+[    1.132091] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.132107] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.132123] usb usb1: Product: EHCI Host Controller
+[    1.132143] usb usb1: Manufacturer: Linux 3.4.0 ehci_hcd
+[    1.132152] usb usb1: SerialNumber: 0000:00:1a.0
+[    1.132313] hub 1-0:1.0: USB hub found
+[    1.132324] hub 1-0:1.0: 7 ports detected
+[    1.132454] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+[    1.132460] ehci_hcd 0000:00:1d.0: EHCI Host Controller
+[    1.132527] ehci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 2
+[    1.132569] ehci_hcd 0000:00:1d.0: debug port 2
+[    1.136451] ehci_hcd 0000:00:1d.0: cache line size of 64 is not supported
+[    1.136475] ehci_hcd 0000:00:1d.0: irq 19, io mem 0xe0705c00
+[    1.142042] ehci_hcd 0000:00:1d.0: USB 2.0 started, EHCI 1.00
+[    1.142085] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.142101] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.142116] usb usb2: Product: EHCI Host Controller
+[    1.142128] usb usb2: Manufacturer: Linux 3.4.0 ehci_hcd
+[    1.142148] usb usb2: SerialNumber: 0000:00:1d.0
+[    1.142292] hub 2-0:1.0: USB hub found
+[    1.142302] hub 2-0:1.0: 11 ports detected
+[    1.142430] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.142455] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.142530] usbcore: registered new interface driver cdc_acm
+[    1.142539] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.142551] Initializing USB Mass Storage driver...
+[    1.142586] usbcore: registered new interface driver usb-storage
+[    1.142595] USB Mass Storage support registered.
+[    1.142629] usbcore: registered new interface driver libusual
+[    1.142653] usbcore: registered new interface driver ums-realtek
+[    1.142697] usbcore: registered new interface driver usbserial
+[    1.142720] usbcore: registered new interface driver usbserial_generic
+[    1.142740] USB Serial support registered for generic
+[    1.142749] usbserial: USB Serial Driver core
+[    1.142823] i8042: PNP: PS/2 Controller [PNP0303:PS2K] at 0x60,0x64 irq 1
+[    1.142834] i8042: PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+[    1.148932] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.152692] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[    1.152773] device-mapper: verity: version 0.1.0 loaded
+[    1.152782] device-mapper: verity-chromeos: dm-verity-chromeos registered
+[    1.152794] device-mapper: bootcache: version 0.1.0 loaded
+[    1.152910] cpuidle: using governor ladder
+[    1.153008] cpuidle: using governor menu
+[    1.153336] gsmi version 1.0 loaded
+[    1.153403] usbcore: registered new interface driver usbhid
+[    1.153411] usbhid: USB HID core driver
+[    1.153879] Netfilter messages via NETLINK v0.30.
+[    1.153904] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    1.154127] ctnetlink v0.93: registering with nfnetlink.
+[    1.154355] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.154400] TCP: cubic registered
+[    1.154406] Initializing XFRM netlink socket
+[    1.154594] NET: Registered protocol family 10
+[    1.154908] NET: Registered protocol family 17
+[    1.155350] Using IPI No-Shortcut mode
+[    1.156427]   Magic number: 9:777:911
+[    1.156862] ALSA device list:
+[    1.156869]   No soundcards found.
+[    1.156895] Warning: unable to open an initial console.
+[    1.158524] cyapa 7-0067: Cypress APA Trackpad Information:
+[    1.158527]     Product ID:  CYTRA-103002-00
+[    1.158529]     Protocol Generation:  3
+[    1.158530]     Firmware Version:  1.9
+[    1.158531]     Hardware Version:  1.0
+[    1.158533]     Max ABS X,Y:   870,470
+[    1.158534]     Physical Size X,Y:   87,47
+[    1.158666] input: Cypress APA Trackpad (cyapa) as /devices/pci0000:00/0000:00:1f.3/i2c-7/7-0067/input/input5
+[    1.194042] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input6
+[    1.232159] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    1.249770] ata1.00: ATA-8: ST320LT020-9YG142, 0010SDM1, max UDMA/133
+[    1.249791] ata1.00: 625142448 sectors, multi 16: LBA48 NCQ (depth 31/32)
+[    1.252439] ata1.00: configured for UDMA/133
+[    1.252886] scsi 0:0:0:0: Direct-Access     ATA      ST320LT020-9YG14 0010 PQ: 0 ANSI: 5
+[    1.253290] sd 0:0:0:0: [sda] 625142448 512-byte logical blocks: (320 GB/298 GiB)
+[    1.253310] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[    1.253440] sd 0:0:0:0: [sda] Write Protect is off
+[    1.253455] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    1.253611] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.256067] Refined TSC clocksource calibration: 1097.506 MHz.
+[    1.256087] Switching to clocksource tsc
+[    1.321695]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12
+[    1.323501] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.323544] device-mapper: init: attempting early device configuration.
+[    1.324081] device-mapper: init: adding target '0 2097152 verity payload=d27d+1 hashtree=d27d+1 hashstart=2097152 alg=sha1 root_hexdigest=2ad0035298bc35e0d2bfd2bf3abc5dffe7c06d19 salt=074eb2c1f8e95862596b78496c33860ea913c2bd1dfab4f4cf44b52850828b40'
+[    1.324122] device-mapper: verity: Argument 0: 'payload=d27d+1'
+[    1.324137] device-mapper: verity: Argument 1: 'hashtree=d27d+1'
+[    1.324150] device-mapper: verity: Argument 2: 'hashstart=2097152'
+[    1.324162] device-mapper: verity: Argument 3: 'alg=sha1'
+[    1.324171] device-mapper: verity: Argument 4: 'root_hexdigest=2ad0035298bc35e0d2bfd2bf3abc5dffe7c06d19'
+[    1.324186] device-mapper: verity: Argument 5: 'salt=074eb2c1f8e95862596b78496c33860ea913c2bd1dfab4f4cf44b52850828b40'
+[    1.324285] device-mapper: verity: dev:sda5 hash:sda5 [sectors:16520 blocks:262144]
+[    1.324359] device-mapper: init: dm-0 is ready
+[    1.394861] VFS: Mounted root (ext2 filesystem) readonly on device 254:0.
+[    1.423473] devtmpfs: mounted
+[    1.423724] Freeing unused kernel memory: 460k freed
+[    1.424066] Write protecting the kernel text: 3860k
+[    1.424192] Write protecting the kernel read-only data: 1484k
+[    1.424205] NX-protecting the kernel data: 4332k
+[    1.434162] usb 1-1: new high-speed USB device number 2 using ehci_hcd
+[    1.548667] usb 1-1: New USB device found, idVendor=8087, idProduct=0024
+[    1.548689] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.549296] hub 1-1:1.0: USB hub found
+[    1.549451] hub 1-1:1.0: 4 ports detected
+[    1.652205] usb 2-1: new high-speed USB device number 2 using ehci_hcd
+[    1.766388] usb 2-1: New USB device found, idVendor=8087, idProduct=0024
+[    1.766410] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.766693] hub 2-1:1.0: USB hub found
+[    1.766750] hub 2-1:1.0: 4 ports detected
+[    1.840170] usb 1-1.1: new full-speed USB device number 3 using ehci_hcd
+[    1.927255] usb 1-1.1: string descriptor 0 read error: -22
+[    1.927276] usb 1-1.1: New USB device found, idVendor=0489, idProduct=e04e
+[    1.927293] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.001324] usb 1-1.3: new high-speed USB device number 4 using ehci_hcd
+[    2.140123] usb 1-1.3: New USB device found, idVendor=064e, idProduct=d251
+[    2.140146] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.140162] usb 1-1.3: Product: HD WebCam
+[    2.140173] usb 1-1.3: Manufacturer: SuYin
+[    2.140183] usb 1-1.3: SerialNumber: HF1016-A21U-OV02-VA-R01.00.03
+[    2.311361] udevd[68]: starting version 171
+[    3.197656] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: commit=600
+[    3.342307] Chromium OS LSM: init_module locked module="/lib/modules/3.4.0/kernel/drivers/input/joydev.ko" pid=107 cmdline="/sbin/modprobe -bv input:b0018v0000p0000e0001_e0,1,3,k110,145,148,14A,14D,14E,14F,ra0,1,18,2F,35,36,39,3A,mlsfw"
+[    3.342345] Chromium OS LSM: dev(254,0): read-only
+[    3.342354] Chromium OS LSM: module locking engaged.
+[    3.575160] EXT4-fs (sda8): mounted filesystem with ordered data mode. Opts: commit=600
+[    9.133229] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: discard,commit=600
+[    9.474285] EXT4-fs (sda1): re-mounted. Opts: commit=600,data=ordered
+[   12.967073] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   14.521571] RTM_NEWLINK: idx=1, flags=0x10049, deliver=1, fail=0, congest=0
+[   14.522037] RTM_NEWLINK: idx=1, flags=0x10049, deliver=0, fail=0, congest=0
+[   15.821123] init: disable_echo main process (66) killed by TERM signal
+[   17.331969] RTM_NEWLINK: idx=2, flags=0x8, deliver=0, fail=0, congest=0
+[   28.931405] low_mem: setting minfree to 106496 kB
+[   29.240236] fuse init (API version 7.18)
+[   29.337433] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337472] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337488] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337503] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337518] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337533] RTM_NEWLINK: idx=131084, flags=0x30386C6E, deliver=0, fail=0, congest=0
+[   29.337630] cfg80211: Calling CRDA to update world regulatory domain
+[   29.893347] nm10_gpio version 0.04 built on Feb 27 2013 at 13:27:03
+[   29.893371] gpiochip_find_base: found new base at 160
+[   29.893424] gpiochip_add: registered GPIOs 160 to 255 on device: 0000:00:1f.0
+[   29.895852] rtc_cmos 00:08: RTC can wake from S4
+[   29.896381] rtc_cmos 00:08: rtc core: registered rtc_cmos as rtc0
+[   29.896429] rtc0: alarms up to one month, 242 bytes nvram, hpet irqs
+[   29.953017] Bluetooth: Core ver 2.16
+[   29.953053] NET: Registered protocol family 31
+[   29.953062] Bluetooth: HCI device and connection manager initialized
+[   29.953072] Bluetooth: HCI socket layer initialized
+[   29.953081] Bluetooth: L2CAP socket layer initialized
+[   29.953094] Bluetooth: SCO socket layer initialized
+[   30.740100] tg3.c:v3.123 (March 21, 2012)
+[   30.749687] RTM_NEWLINK: idx=3, flags=0x1002, deliver=1, fail=0, congest=0
+[   30.749705] tg3 0000:02:00.0: eth0: Tigon3 [partno(BCM57785) rev 57785100] (PCI Express) MAC address 20:89:84:83:2a:fd
+[   30.749723] tg3 0000:02:00.0: eth0: attached PHY is 57765 (10/100/1000Base-T Ethernet) (WireSpeed[1], EEE[1])
+[   30.749740] tg3 0000:02:00.0: eth0: RXcsums[1] LinkChgREG[0] MIirq[0] ASF[0] TSOcap[1]
+[   30.749754] tg3 0000:02:00.0: eth0: dma_rwctrl[00000001] dma_mask[64-bit]
+[   30.755564] sdhci: Secure Digital Host Controller Interface driver
+[   30.755576] sdhci: Copyright(c) Pierre Ossman
+[   30.756650] Linux video capture interface: v2.00
+[   30.762180] tg3 0000:02:00.0: irq 44 for MSI/MSI-X
+[   30.762195] tg3 0000:02:00.0: irq 45 for MSI/MSI-X
+[   30.762207] tg3 0000:02:00.0: irq 46 for MSI/MSI-X
+[   30.853671] usbcore: registered new interface driver btusb
+[   31.217742] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[   31.320822] RTM_NEWLINK: idx=3, flags=0x1043, deliver=1, fail=0, congest=0
+[   31.321166] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   31.321549] RTM_NEWLINK: idx=3, flags=0x1003, deliver=1, fail=0, congest=0
+[   31.340604] sdhci-pci 0000:02:00.1: SDHCI controller found [14e4:16bc] (rev 10)
+[   31.340781] Registered led device: mmc0::
+[   31.342248] mmc0: SDHCI controller on PCI [0000:02:00.1] using DMA
+[   31.430076] uvcvideo: Found UVC 1.00 device HD WebCam (064e:d251)
+[   31.438201] usbcore: registered new interface driver uvcvideo
+[   31.438213] USB Video Class driver (1.1.1)
+[   31.443342] cfg80211: World regulatory domain updated:
+[   31.443355] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   31.443370] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   31.443383] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   31.443396] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   31.443409] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   31.443422] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   31.547946] input: HDA Intel PCH HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input7
+[   31.548187] input: HDA Intel PCH HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input8
+[   31.548674] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
+[   31.548894] input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
+[   31.549102] input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+[   31.596724] usbcore: registered new interface driver ath3k
+[   31.764660] gpio_request: gpio-415 (sysfs) status -22
+[   31.764666] export_store: status -22
+[   31.818435] ath: phy0: ASPM enabled: 0x43
+[   31.818448] ath: EEPROM regdomain: 0x6c
+[   31.818451] ath: EEPROM indicates we should expect a direct regpair map
+[   31.818456] ath: Country alpha2 being used: 00
+[   31.818459] ath: Regpair used: 0x6c
+[   31.820021] ieee80211 phy0: Selected rate control algorithm 'ath9k_btcoex_rate_cotnrol'
+[   31.820581] RTM_NEWLINK: idx=4, flags=0x1002, deliver=1, fail=0, congest=0
+[   31.826777] Registered led device: ath9k-phy0
+[   31.826793] ieee80211 phy0: Atheros AR9462 Rev:2 mem=0xf9380000, irq=17
+[   31.836537] i2c /dev entries driver
+[   31.846653] usb 1-1.1: USB disconnect, device number 3
+[   31.866170] ieee80211 phy0: device now idle
+[   31.877108] RTM_NEWLINK: idx=4, flags=0x1043, deliver=2, fail=0, congest=0
+[   31.877462] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   31.877806] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   31.939599] ieee80211 phy0: device no longer idle - scanning
+[   32.024417] usb 1-1.1: new full-speed USB device number 5 using ehci_hcd
+[   32.111025] usb 1-1.1: string descriptor 0 read error: -22
+[   32.111046] usb 1-1.1: New USB device found, idVendor=0489, idProduct=e04e
+[   32.111063] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   32.321624] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   33.431297] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+[   35.895903] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   35.898917] ieee80211 phy0: device now idle
+[   36.703918] init: bootcache main process (2298) terminated with status 2
+[   45.923522] ieee80211 phy0: device no longer idle - scanning
+[   49.881217] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   49.885343] ieee80211 phy0: device now idle
+[   59.933730] ieee80211 phy0: device no longer idle - scanning
+[   63.892517] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   63.897950] ieee80211 phy0: device now idle
+[   73.902141] ieee80211 phy0: device no longer idle - scanning
+[   77.378150] gpio_request: gpio-415 (sysfs) status -22
+[   77.378156] export_store: status -22
+[   77.856664] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   77.863420] ieee80211 phy0: device now idle
+[   87.598956] gpio_request: gpio-415 (sysfs) status -22
+[   87.598962] export_store: status -22
+[   88.764339] ieee80211 phy0: device no longer idle - scanning
+[   92.718735] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[   92.724238] ieee80211 phy0: device now idle
+[  148.763842] ieee80211 phy0: device no longer idle - scanning
+[  152.715845] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  152.721516] ieee80211 phy0: device now idle
+[  208.763949] ieee80211 phy0: device no longer idle - scanning
+[  212.717372] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  212.725289] ieee80211 phy0: device now idle
+[  268.762742] ieee80211 phy0: device no longer idle - scanning
+[  272.716233] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  272.722383] ieee80211 phy0: device now idle
+[  328.761390] ieee80211 phy0: device no longer idle - scanning
+[  332.720375] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  332.726955] ieee80211 phy0: device now idle
+[  388.760227] ieee80211 phy0: device no longer idle - scanning
+[  392.719312] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  392.724377] ieee80211 phy0: device now idle
+[  448.760299] ieee80211 phy0: device no longer idle - scanning
+[  452.719224] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  452.724689] ieee80211 phy0: device now idle
+[  508.759747] ieee80211 phy0: device no longer idle - scanning
+[  512.714837] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  512.722639] ieee80211 phy0: device now idle
+[  568.758063] ieee80211 phy0: device no longer idle - scanning
+[  572.721893] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  572.727532] ieee80211 phy0: device now idle
+[  752.723858] ieee80211 phy0: device no longer idle - scanning
+[  756.692942] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  756.696800] ieee80211 phy0: device now idle
+[  936.724135] ieee80211 phy0: device no longer idle - scanning
+[  940.692197] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  940.697973] ieee80211 phy0: device now idle
+[  995.966412] ieee80211 phy0: device no longer idle - scanning
+[  999.924260] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[  999.928695] ieee80211 phy0: device now idle
+[ 1179.938545] ieee80211 phy0: device no longer idle - scanning
+[ 1183.912934] ieee80211 phy0: device now idle
+[ 1183.916096] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1183.968443] init: powerd main process (544) killed by TERM signal
+[ 1192.622319] ieee80211 phy0: device no longer idle - scanning
+[ 1196.586253] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1196.592339] ieee80211 phy0: device now idle
+[ 1376.600480] ieee80211 phy0: device no longer idle - scanning
+[ 1380.569805] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1380.575285] ieee80211 phy0: device now idle
+[ 1560.585767] ieee80211 phy0: device no longer idle - scanning
+[ 1564.556746] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1564.559417] ieee80211 phy0: device now idle
+[ 1720.825313] cyapa 7-0067: read_block failed in cyapa_irq. ret = -6
+[ 1720.825872] cyapa 7-0067: i2c read block reg: 0x00 len: 3 ret: 4294967290
+[ 1720.825884] cyapa 7-0067: smbus: probing with BL_STATUS command
+[ 1720.826728] cyapa 7-0067: smbus read block cmd: 0xc0 len: 3 ret: 3
+[ 1720.826738] cyapa 7-0067: device state: operational mode
+[ 1720.830061] cyapa 7-0067: smbus read block cmd: 0x98 len: 27 ret: 27
+[ 1721.142192] ieee80211 phy0: device no longer idle - scanning
+[ 1725.110963] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1725.115149] ieee80211 phy0: device now idle
+[ 1741.528278] PM: Syncing filesystems ... done.
+[ 1741.742724] PM: Preparing system for mem sleep
+[ 1741.742880] Freezing user space processes ... (elapsed 0.01 seconds) done.
+[ 1741.753317] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[ 1741.764314] PM: Entering mem sleep
+[ 1741.764462] calling  rfkill1+ @ 3109, parent: hci0
+[ 1741.764471] call rfkill1+ returned 0 after 0 usecs
+[ 1741.764496] calling  1-1.1+ @ 2863, parent: 1-1
+[ 1741.764501] calling  ath9k-phy0+ @ 3109, parent: 0000:01:00.0
+[ 1741.764505] call ath9k-phy0+ returned 0 after 0 usecs
+[ 1741.764523] calling  rfkill0+ @ 3109, parent: phy0
+[ 1741.764533] call rfkill0+ returned 0 after 1 usecs
+[ 1741.764542] calling  phy0+ @ 3109, parent: 0000:01:00.0
+[ 1741.775255] call 1-1.1+ returned 0 after 10492 usecs
+[ 1741.788043] call phy0+ returned 0 after 22940 usecs
+[ 1741.788069] calling  input11+ @ 3109, parent: card0
+[ 1741.788079] call input11+ returned 0 after 0 usecs
+[ 1741.788088] calling  input10+ @ 3109, parent: card0
+[ 1741.788097] call input10+ returned 0 after 0 usecs
+[ 1741.788107] calling  input9+ @ 3109, parent: card0
+[ 1741.788116] call input9+ returned 0 after 0 usecs
+[ 1741.788125] calling  input8+ @ 3109, parent: card0
+[ 1741.788134] call input8+ returned 0 after 0 usecs
+[ 1741.788143] calling  input7+ @ 3109, parent: card0
+[ 1741.788152] call input7+ returned 0 after 0 usecs
+[ 1741.788165] calling  mmc0::+ @ 3109, parent: 0000:02:00.1
+[ 1741.788174] call mmc0::+ returned 0 after 0 usecs
+[ 1741.788187] calling  regulatory.0+ @ 3109, parent: platform
+[ 1741.788197] call regulatory.0+ returned 0 after 0 usecs
+[ 1741.788237] calling  1-1.3+ @ 2788, parent: 1-1
+[ 1741.788258] calling  2-1+ @ 2863, parent: usb2
+[ 1741.788370] calling  input6+ @ 3109, parent: serio0
+[ 1741.788403] call input6+ returned 0 after 23 usecs
+[ 1741.788413] calling  input5+ @ 3109, parent: 7-0067
+[ 1741.788422] call input5+ returned 0 after 0 usecs
+[ 1741.788434] calling  7-0067+ @ 3109, parent: i2c-7
+[ 1741.789586] call 7-0067+ returned 0 after 1113 usecs
+[ 1741.789601] calling  gsmi+ @ 3109, parent: platform
+[ 1741.789610] call gsmi+ returned 0 after 0 usecs
+[ 1741.789622] calling  coretemp.0+ @ 3109, parent: platform
+[ 1741.789631] call coretemp.0+ returned 0 after 0 usecs
+[ 1741.789641] calling  i2c-7+ @ 3109, parent: 0000:00:1f.3
+[ 1741.789651] call i2c-7+ returned 0 after 0 usecs
+[ 1741.789664] calling  serio0+ @ 3109, parent: i8042
+[ 1741.791567] calling  0:0:0:0+ @ 3175, parent: target0:0:0
+[ 1741.791582] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 1741.791893] sd 0:0:0:0: [sda] Stopping disk
+[ 1741.792052] call serio0+ returned 0 after 2322 usecs
+[ 1741.792065] calling  i8042+ @ 3109, parent: platform
+[ 1741.801079] call i8042+ returned 0 after 8793 usecs
+[ 1741.801101] call 2-1+ returned 0 after 12533 usecs
+[ 1741.801145] calling  usb2+ @ 2863, parent: 0000:00:1d.0
+[ 1741.801181] calling  i2c-6+ @ 3109, parent: card0-DP-1
+[ 1741.801185] call usb2+ returned 0 after 26 usecs
+[ 1741.801193] call i2c-6+ returned 0 after 0 usecs
+[ 1741.801208] calling  card0-DP-1+ @ 3109, parent: card0
+[ 1741.801217] call card0-DP-1+ returned 0 after 0 usecs
+[ 1741.801226] calling  card0-HDMI-A-1+ @ 3109, parent: card0
+[ 1741.801236] call card0-HDMI-A-1+ returned 0 after 0 usecs
+[ 1741.801248] call 1-1.3+ returned 0 after 12693 usecs
+[ 1741.801253] calling  card0-VGA-1+ @ 3109, parent: card0
+[ 1741.801256] call card0-VGA-1+ returned 0 after 0 usecs
+[ 1741.801267] calling  host3+ @ 2788, parent: ata4
+[ 1741.801270] call host3+ returned 0 after 0 usecs
+[ 1741.801274] calling  intel_backlight+ @ 3109, parent: card0-LVDS-1
+[ 1741.801278] call intel_backlight+ returned 0 after 0 usecs
+[ 1741.801282] calling  card0-LVDS-1+ @ 3109, parent: card0
+[ 1741.801290] calling  host2+ @ 2788, parent: ata3
+[ 1741.801292] call host2+ returned 0 after 0 usecs
+[ 1741.801298] calling  host1+ @ 2788, parent: ata2
+[ 1741.801301] call host1+ returned 0 after 0 usecs
+[ 1741.801305] call card0-LVDS-1+ returned 0 after 0 usecs
+[ 1741.801309] calling  1-1+ @ 2977, parent: usb1
+[ 1741.801335] calling  i2c-5+ @ 3109, parent: 0000:00:02.0
+[ 1741.801349] call i2c-5+ returned 0 after 0 usecs
+[ 1741.801358] calling  i2c-4+ @ 3109, parent: 0000:00:02.0
+[ 1741.801367] call i2c-4+ returned 0 after 0 usecs
+[ 1741.801376] calling  i2c-3+ @ 3109, parent: 0000:00:02.0
+[ 1741.801385] call i2c-3+ returned 0 after 0 usecs
+[ 1741.801394] calling  i2c-2+ @ 3109, parent: 0000:00:02.0
+[ 1741.801403] call i2c-2+ returned 0 after 0 usecs
+[ 1741.801412] calling  i2c-1+ @ 3109, parent: 0000:00:02.0
+[ 1741.801420] call i2c-1+ returned 0 after 0 usecs
+[ 1741.801429] calling  i2c-0+ @ 3109, parent: 0000:00:02.0
+[ 1741.801438] call i2c-0+ returned 0 after 0 usecs
+[ 1741.801448] calling  card0+ @ 3109, parent: 0000:00:02.0
+[ 1741.801457] call card0+ returned 0 after 0 usecs
+[ 1741.801466] calling  controlD64+ @ 3109, parent: 0000:00:02.0
+[ 1741.801475] call controlD64+ returned 0 after 0 usecs
+[ 1741.801487] calling  tpm_tis+ @ 3109, parent: platform
+[ 1741.801543] calling  ata4+ @ 3177, parent: 0000:00:1f.2
+[ 1741.801579] calling  ata3+ @ 3178, parent: 0000:00:1f.2
+[ 1741.801594] call ata4+ returned 0 after 40 usecs
+[ 1741.801605] calling  ata2+ @ 3177, parent: 0000:00:1f.2
+[ 1741.801618] call ata3+ returned 0 after 29 usecs
+[ 1741.801630] call ata2+ returned 0 after 16 usecs
+[ 1741.812290] call 1-1+ returned 0 after 10718 usecs
+[ 1741.812313] calling  usb1+ @ 2863, parent: 0000:00:1a.0
+[ 1741.812352] call usb1+ returned 0 after 27 usecs
+[ 1741.813315] call tpm_tis+ returned 0 after 11539 usecs
+[ 1741.813337] calling  input4+ @ 3109, parent: LNXVIDEO:00
+[ 1741.813347] call input4+ returned 0 after 0 usecs
+[ 1741.813357] calling  input3+ @ 3109, parent: LNXPWRBN:00
+[ 1741.813366] call input3+ returned 0 after 0 usecs
+[ 1741.813375] calling  input2+ @ 3109, parent: PNP0C0E:00
+[ 1741.813384] call input2+ returned 0 after 0 usecs
+[ 1741.813393] calling  input1+ @ 3109, parent: PNP0C0C:00
+[ 1741.813402] call input1+ returned 0 after 0 usecs
+[ 1741.813411] calling  input0+ @ 3109, parent: PNP0C0D:00
+[ 1741.813420] call input0+ returned 0 after 0 usecs
+[ 1741.813443] calling  alarmtimer+ @ 3109, parent: platform
+[ 1741.813454] call alarmtimer+ returned 0 after 1 usecs
+[ 1741.813466] calling  microcode+ @ 3109, parent: platform
+[ 1741.813476] call microcode+ returned 0 after 0 usecs
+[ 1741.813545] calling  00:09+ @ 3109, parent: pnp0
+[ 1741.813556] call 00:09+ returned 0 after 2 usecs
+[ 1741.813565] calling  00:08+ @ 3109, parent: pnp0
+[ 1741.813579] call 00:08+ returned 0 after 5 usecs
+[ 1741.813588] calling  00:07+ @ 3109, parent: pnp0
+[ 1741.813597] call 00:07+ returned 0 after 1 usecs
+[ 1741.813606] calling  00:06+ @ 3109, parent: pnp0
+[ 1741.813614] call 00:06+ returned 0 after 0 usecs
+[ 1741.813622] calling  00:05+ @ 3109, parent: pnp0
+[ 1741.813631] call 00:05+ returned 0 after 0 usecs
+[ 1741.813640] calling  00:04+ @ 3109, parent: pnp0
+[ 1741.813648] call 00:04+ returned 0 after 0 usecs
+[ 1741.813657] calling  00:03+ @ 3109, parent: pnp0
+[ 1741.813665] call 00:03+ returned 0 after 0 usecs
+[ 1741.813673] calling  00:02+ @ 3109, parent: pnp0
+[ 1741.813682] call 00:02+ returned 0 after 0 usecs
+[ 1741.813691] calling  00:01+ @ 3109, parent: pnp0
+[ 1741.813699] call 00:01+ returned 0 after 0 usecs
+[ 1741.813708] calling  00:00+ @ 3109, parent: pnp0
+[ 1741.813716] call 00:00+ returned 0 after 0 usecs
+[ 1741.813728] calling  ramoops.0+ @ 3109, parent: platform
+[ 1741.813738] call ramoops.0+ returned 0 after 0 usecs
+[ 1741.813747] calling  chromeos_acpi+ @ 3109, parent: platform
+[ 1741.813757] call chromeos_acpi+ returned 0 after 0 usecs
+[ 1741.813775] calling  0000:02:00.1+ @ 2863, parent: 0000:00:1c.1
+[ 1741.813787] calling  LNXPWRBN:00+ @ 3109, parent: LNXSYSTM:00
+[ 1741.813797] call LNXPWRBN:00+ returned 0 after 0 usecs
+[ 1741.813806] calling  GGL0001:00+ @ 3109, parent: LNXSYSTM:00
+[ 1741.813816] call GGL0001:00+ returned 0 after 0 usecs
+[ 1741.813825] calling  LNXTHERM:00+ @ 3109, parent: device:27
+[ 1741.813835] call LNXTHERM:00+ returned 0 after 0 usecs
+[ 1741.813844] calling  device:27+ @ 3109, parent: LNXSYSTM:00
+[ 1741.813854] call device:27+ returned 0 after 0 usecs
+[ 1741.813863] calling  device:26+ @ 3109, parent: PNP0A08:00
+[ 1741.813872] call device:26+ returned 0 after 0 usecs
+[ 1741.813882] calling  device:25+ @ 3109, parent: device:23
+[ 1741.813891] call device:25+ returned 0 after 0 usecs
+[ 1741.813900] calling  device:24+ @ 3109, parent: device:23
+[ 1741.813909] call device:24+ returned 0 after 0 usecs
+[ 1741.813919] calling  device:23+ @ 3109, parent: device:22
+[ 1741.813928] call device:23+ returned 0 after 0 usecs
+[ 1741.813937] calling  device:22+ @ 3109, parent: PNP0A08:00
+[ 1741.813946] call device:22+ returned 0 after 0 usecs
+[ 1741.813956] calling  PNP0303:00+ @ 3109, parent: device:21
+[ 1741.813965] call PNP0303:00+ returned 0 after 0 usecs
+[ 1741.813974] calling  device:21+ @ 3109, parent: device:20
+[ 1741.813983] call device:21+ returned 0 after 0 usecs
+[ 1741.813993] calling  PNP0100:00+ @ 3109, parent: device:20
+[ 1741.814002] call PNP0100:00+ returned 0 after 0 usecs
+[ 1741.814011] calling  PNP0B00:00+ @ 3109, parent: device:20
+[ 1741.814020] call PNP0B00:00+ returned 0 after 0 usecs
+[ 1741.814030] calling  PNP0C02:01+ @ 3109, parent: device:20
+[ 1741.814039] call PNP0C02:01+ returned 0 after 0 usecs
+[ 1741.814048] calling  PNP0C04:00+ @ 3109, parent: device:20
+[ 1741.814057] call PNP0C04:00+ returned 0 after 0 usecs
+[ 1741.814067] calling  PNP0000:00+ @ 3109, parent: device:20
+[ 1741.814076] call PNP0000:00+ returned 0 after 0 usecs
+[ 1741.814085] calling  PNP0103:00+ @ 3109, parent: device:20
+[ 1741.814094] call PNP0103:00+ returned 0 after 0 usecs
+[ 1741.814104] calling  INT0800:00+ @ 3109, parent: device:20
+[ 1741.814113] call INT0800:00+ returned 0 after 0 usecs
+[ 1741.814122] calling  PNP0200:00+ @ 3109, parent: device:20
+[ 1741.814131] call PNP0200:00+ returned 0 after 0 usecs
+[ 1741.814141] calling  PNP0C0A:00+ @ 3109, parent: PNP0C09:00
+[ 1741.814150] call PNP0C0A:00+ returned 0 after 0 usecs
+[ 1741.814160] calling  ACPI0003:00+ @ 3109, parent: PNP0C09:00
+[ 1741.814169] call ACPI0003:00+ returned 0 after 0 usecs
+[ 1741.814179] calling  PNP0C09:00+ @ 3109, parent: device:20
+[ 1741.814188] call PNP0C09:00+ returned 0 after 0 usecs
+[ 1741.814197] calling  PNP0C0F:07+ @ 3109, parent: device:20
+[ 1741.814207] call PNP0C0F:07+ returned 0 after 0 usecs
+[ 1741.814216] calling  PNP0C0F:06+ @ 3109, parent: device:20
+[ 1741.814225] call PNP0C0F:06+ returned 0 after 0 usecs
+[ 1741.814234] calling  PNP0C0F:05+ @ 3109, parent: device:20
+[ 1741.814250] call PNP0C0F:05+ returned 0 after 0 usecs
+[ 1741.814260] calling  PNP0C0F:04+ @ 3109, parent: device:20
+[ 1741.814269] call PNP0C0F:04+ returned 0 after 0 usecs
+[ 1741.814278] calling  PNP0C0F:03+ @ 3109, parent: device:20
+[ 1741.814287] call PNP0C0F:03+ returned 0 after 0 usecs
+[ 1741.814296] calling  PNP0C0F:02+ @ 3109, parent: device:20
+[ 1741.814305] call PNP0C0F:02+ returned 0 after 0 usecs
+[ 1741.814315] calling  PNP0C0F:01+ @ 3109, parent: device:20
+[ 1741.814324] call PNP0C0F:01+ returned 0 after 0 usecs
+[ 1741.814333] calling  PNP0C0F:00+ @ 3109, parent: device:20
+[ 1741.814342] call PNP0C0F:00+ returned 0 after 0 usecs
+[ 1741.814353] calling  device:20+ @ 3109, parent: PNP0A08:00
+[ 1741.814363] call device:20+ returned 0 after 0 usecs
+[ 1741.814372] calling  device:1f+ @ 3109, parent: device:19
+[ 1741.814381] call device:1f+ returned 0 after 0 usecs
+[ 1741.814390] calling  device:1e+ @ 3109, parent: device:19
+[ 1741.814400] call device:1e+ returned 0 after 0 usecs
+[ 1741.814409] calling  device:1d+ @ 3109, parent: device:19
+[ 1741.814418] call device:1d+ returned 0 after 0 usecs
+[ 1741.814427] calling  device:1c+ @ 3109, parent: device:19
+[ 1741.814436] call device:1c+ returned 0 after 0 usecs
+[ 1741.814445] calling  device:1b+ @ 3109, parent: device:19
+[ 1741.814454] call device:1b+ returned 0 after 0 usecs
+[ 1741.814464] calling  device:1a+ @ 3109, parent: device:19
+[ 1741.814473] call device:1a+ returned 0 after 0 usecs
+[ 1741.814482] calling  device:19+ @ 3109, parent: device:18
+[ 1741.814492] call device:19+ returned 0 after 0 usecs
+[ 1741.814501] calling  device:18+ @ 3109, parent: PNP0A08:00
+[ 1741.814510] call device:18+ returned 0 after 0 usecs
+[ 1741.814519] calling  device:17+ @ 3109, parent: device:11
+[ 1741.814528] call device:17+ returned 0 after 0 usecs
+[ 1741.814537] calling  device:16+ @ 3109, parent: device:11
+[ 1741.814547] call device:16+ returned 0 after 0 usecs
+[ 1741.814556] calling  device:15+ @ 3109, parent: device:11
+[ 1741.814565] call device:15+ returned 0 after 0 usecs
+[ 1741.814574] calling  device:14+ @ 3109, parent: device:11
+[ 1741.814583] call device:14+ returned 0 after 0 usecs
+[ 1741.814592] calling  device:13+ @ 3109, parent: device:11
+[ 1741.814601] call device:13+ returned 0 after 0 usecs
+[ 1741.814610] calling  device:12+ @ 3109, parent: device:11
+[ 1741.814619] call device:12+ returned 0 after 0 usecs
+[ 1741.814629] calling  device:11+ @ 3109, parent: device:10
+[ 1741.814638] call device:11+ returned 0 after 0 usecs
+[ 1741.814648] calling  device:10+ @ 3109, parent: PNP0A08:00
+[ 1741.814657] call device:10+ returned 0 after 0 usecs
+[ 1741.814666] calling  device:0f+ @ 3109, parent: PNP0A08:00
+[ 1741.814675] call device:0f+ returned 0 after 0 usecs
+[ 1741.814684] calling  device:0e+ @ 3109, parent: PNP0A08:00
+[ 1741.814694] call device:0e+ returned 0 after 0 usecs
+[ 1741.814703] calling  device:0d+ @ 3109, parent: PNP0A08:00
+[ 1741.814712] call device:0d+ returned 0 after 0 usecs
+[ 1741.814721] calling  device:0c+ @ 3109, parent: PNP0A08:00
+[ 1741.814730] call device:0c+ returned 0 after 0 usecs
+[ 1741.814739] calling  device:0b+ @ 3109, parent: PNP0A08:00
+[ 1741.814749] call device:0b+ returned 0 after 0 usecs
+[ 1741.814758] calling  device:0a+ @ 3109, parent: PNP0A08:00
+[ 1741.814767] call device:0a+ returned 0 after 0 usecs
+[ 1741.814776] calling  device:09+ @ 3109, parent: PNP0A08:00
+[ 1741.814785] call device:09+ returned 0 after 0 usecs
+[ 1741.814795] calling  device:08+ @ 3109, parent: PNP0A08:00
+[ 1741.814804] call device:08+ returned 0 after 0 usecs
+[ 1741.814813] calling  device:07+ @ 3109, parent: PNP0A08:00
+[ 1741.814822] call device:07+ returned 0 after 0 usecs
+[ 1741.814831] calling  device:06+ @ 3109, parent: LNXVIDEO:00
+[ 1741.814841] call device:06+ returned 0 after 0 usecs
+[ 1741.814850] calling  device:05+ @ 3109, parent: LNXVIDEO:00
+[ 1741.814859] call device:05+ returned 0 after 0 usecs
+[ 1741.814868] calling  device:04+ @ 3109, parent: LNXVIDEO:00
+[ 1741.814877] call device:04+ returned 0 after 0 usecs
+[ 1741.814886] calling  device:03+ @ 3109, parent: LNXVIDEO:00
+[ 1741.814896] call device:03+ returned 0 after 0 usecs
+[ 1741.814905] calling  device:02+ @ 3109, parent: LNXVIDEO:00
+[ 1741.814914] call device:02+ returned 0 after 0 usecs
+[ 1741.814924] calling  LNXVIDEO:00+ @ 3109, parent: PNP0A08:00
+[ 1741.814933] call LNXVIDEO:00+ returned 0 after 0 usecs
+[ 1741.814943] calling  PNP0C02:00+ @ 3109, parent: PNP0A08:00
+[ 1741.814952] call PNP0C02:00+ returned 0 after 0 usecs
+[ 1741.814961] calling  device:01+ @ 3109, parent: PNP0A08:00
+[ 1741.814970] call device:01+ returned 0 after 0 usecs
+[ 1741.814981] calling  PNP0A08:00+ @ 3109, parent: device:00
+[ 1741.814991] call PNP0A08:00+ returned 0 after 0 usecs
+[ 1741.815000] calling  PNP0C0E:00+ @ 3109, parent: device:00
+[ 1741.815009] call PNP0C0E:00+ returned 0 after 0 usecs
+[ 1741.815019] calling  PNP0C0C:00+ @ 3109, parent: device:00
+[ 1741.815028] call PNP0C0C:00+ returned 0 after 0 usecs
+[ 1741.815038] calling  PNP0C0D:00+ @ 3109, parent: device:00
+[ 1741.815047] call PNP0C0D:00+ returned 0 after 0 usecs
+[ 1741.815056] calling  device:00+ @ 3109, parent: LNXSYSTM:00
+[ 1741.815066] call device:00+ returned 0 after 0 usecs
+[ 1741.815075] calling  LNXCPU:01+ @ 3109, parent: LNXSYSTM:00
+[ 1741.815087] call LNXCPU:01+ returned 0 after 2 usecs
+[ 1741.815096] calling  LNXCPU:00+ @ 3109, parent: LNXSYSTM:00
+[ 1741.815107] call LNXCPU:00+ returned 0 after 1 usecs
+[ 1741.815117] calling  LNXSYSTM:00+ @ 3109, parent: none
+[ 1741.815126] call LNXSYSTM:00+ returned 0 after 0 usecs
+[ 1741.815148] calling  0000:02:00.0+ @ 2977, parent: 0000:00:1c.1
+[ 1741.826272] call 0000:02:00.1+ returned 0 after 12193 usecs
+[ 1741.826288] calling  0000:01:00.0+ @ 2863, parent: 0000:00:1c.0
+[ 1741.832778] call 0000:01:00.0+ returned 0 after 6328 usecs
+[ 1741.832790] calling  0000:00:1f.6+ @ 2863, parent: pci0000:00
+[ 1741.832800] call 0000:00:1f.6+ returned 0 after 0 usecs
+[ 1741.832811] calling  0000:00:1f.3+ @ 2863, parent: pci0000:00
+[ 1741.832872] call 0000:00:1f.3+ returned 0 after 50 usecs
+[ 1742.030930] call 0:0:0:0+ returned 0 after 233748 usecs
+[ 1742.030945] calling  0000:00:1f.0+ @ 3175, parent: pci0000:00
+[ 1742.030971] call 0000:00:1f.0+ returned 0 after 15 usecs
+[ 1742.030982] calling  0000:00:1d.0+ @ 3175, parent: pci0000:00
+[ 1742.031002] call 0000:00:1d.0+ returned 0 after 9 usecs
+[ 1742.195284] calling  target0:0:0+ @ 3176, parent: host0
+[ 1742.195294] call target0:0:0+ returned 0 after 0 usecs
+[ 1742.195308] calling  0000:00:1c.0+ @ 3176, parent: pci0000:00
+[ 1742.195341] call 0000:00:1c.0+ returned 0 after 22 usecs
+[ 1742.195352] calling  0000:00:1b.0+ @ 3176, parent: pci0000:00
+[ 1742.195450] calling  host0+ @ 2788, parent: ata1
+[ 1742.195458] call host0+ returned 0 after 0 usecs
+[ 1742.195483] calling  0000:00:1a.0+ @ 2788, parent: pci0000:00
+[ 1742.195517] call 0000:00:1a.0+ returned 0 after 7 usecs
+[ 1742.195530] calling  0000:00:02.0+ @ 2788, parent: pci0000:00
+[ 1742.210248] call 0000:00:02.0+ returned 0 after 14363 usecs
+[ 1742.210263] calling  0000:00:00.0+ @ 2788, parent: pci0000:00
+[ 1742.210273] call 0000:00:00.0+ returned 0 after 0 usecs
+[ 1742.260239] calling  ata1+ @ 3178, parent: 0000:00:1f.2
+[ 1742.262263] call ata1+ returned 0 after 1966 usecs
+[ 1742.262282] calling  0000:00:1f.2+ @ 2863, parent: pci0000:00
+[ 1742.273266] call 0000:00:1f.2+ returned 0 after 10715 usecs
+[ 1742.371253] call 0000:02:00.0+ returned 0 after 543074 usecs
+[ 1742.371271] calling  0000:00:1c.1+ @ 3175, parent: pci0000:00
+[ 1742.371292] call 0000:00:1c.1+ returned 0 after 10 usecs
+[ 1742.458268] call 0000:00:1b.0+ returned 0 after 256747 usecs
+[ 1742.458301] PM: suspend of devices complete after 693.877 msecs
+[ 1742.458406] PM: late suspend of devices complete after 0.092 msecs
+[ 1742.458495] calling  0000:02:00.1+ @ 3109, parent: 0000:00:1c.1
+[ 1742.458506] call 0000:02:00.1+ returned 0 after 0 usecs
+[ 1742.458516] calling  0000:02:00.0+ @ 3109, parent: 0000:00:1c.1
+[ 1742.458526] call 0000:02:00.0+ returned 0 after 0 usecs
+[ 1742.458535] calling  0000:01:00.0+ @ 3109, parent: 0000:00:1c.0
+[ 1742.469454] call 0000:01:00.0+ returned 0 after 10647 usecs
+[ 1742.469475] calling  0000:00:1f.6+ @ 3109, parent: pci0000:00
+[ 1742.469539] call 0000:00:1f.6+ returned 0 after 48 usecs
+[ 1742.469552] calling  0000:00:1f.3+ @ 3109, parent: pci0000:00
+[ 1742.469566] call 0000:00:1f.3+ returned 0 after 0 usecs
+[ 1742.469578] calling  0000:00:1f.2+ @ 3109, parent: pci0000:00
+[ 1742.469592] call 0000:00:1f.2+ returned 0 after 0 usecs
+[ 1742.469604] calling  0000:00:1f.0+ @ 3109, parent: pci0000:00
+[ 1742.469668] call 0000:00:1f.0+ returned 0 after 50 usecs
+[ 1742.469681] calling  0000:00:1d.0+ @ 3109, parent: pci0000:00
+[ 1742.469783] ehci_hcd 0000:00:1d.0: wake-up capability enabled by ACPI
+[ 1742.480298] call 0000:00:1d.0+ returned 0 after 10351 usecs
+[ 1742.480317] calling  0000:00:1c.1+ @ 3109, parent: pci0000:00
+[ 1742.480332] call 0000:00:1c.1+ returned 0 after 0 usecs
+[ 1742.480345] calling  0000:00:1c.0+ @ 3109, parent: pci0000:00
+[ 1742.480358] call 0000:00:1c.0+ returned 0 after 0 usecs
+[ 1742.480370] calling  0000:00:1b.0+ @ 3109, parent: pci0000:00
+[ 1742.480383] call 0000:00:1b.0+ returned 0 after 0 usecs
+[ 1742.480396] calling  0000:00:1a.0+ @ 3109, parent: pci0000:00
+[ 1742.480491] ehci_hcd 0000:00:1a.0: wake-up capability enabled by ACPI
+[ 1742.491370] call 0000:00:1a.0+ returned 0 after 10698 usecs
+[ 1742.491392] calling  0000:00:02.0+ @ 3109, parent: pci0000:00
+[ 1742.491407] call 0000:00:02.0+ returned 0 after 0 usecs
+[ 1742.491420] calling  0000:00:00.0+ @ 3109, parent: pci0000:00
+[ 1742.491458] call 0000:00:00.0+ returned 0 after 23 usecs
+[ 1742.491495] PM: noirq suspend of devices complete after 33.075 msecs
+[ 1742.491949] ACPI: Preparing to enter system sleep state S3
+[ 1742.492069] PM: Saving platform NVS memory
+[ 1742.492079] Disabling non-boot CPUs ...
+[ 1742.494066] CPU 1 is now offline
+[ 1742.496353] Disabling VMX on cpu 0
+[ 1742.496365] TSC at resume: 419478102
+[ 1742.496372] ACPI: Low-level resume complete
+[ 1742.496434] PM: Restoring platform NVS memory
+[ 1742.496919] NMI watchdog: enabled, takes one hw-pmu counter.
+[ 1742.496970] Enabling non-boot CPUs ...
+[ 1742.497076] Booting Node 0 Processor 1 APIC 0x2
+[ 1742.507421] Initializing CPU#1
+[ 1742.507436] Disabling VMX on cpu 1
+[ 1742.510506] NMI watchdog: enabled, takes one hw-pmu counter.
+[ 1742.510837] CPU1 is up
+[ 1742.512689] ACPI: Waking up from system sleep state S3
+[ 1742.514312] calling  0000:00:00.0+ @ 3109, parent: pci0000:00
+[ 1742.514351] call 0000:00:00.0+ returned 0 after 26 usecs
+[ 1742.514361] calling  0000:00:02.0+ @ 3109, parent: pci0000:00
+[ 1742.514409] call 0000:00:02.0+ returned 0 after 36 usecs
+[ 1742.514418] calling  0000:00:1a.0+ @ 3109, parent: pci0000:00
+[ 1742.514509] ehci_hcd 0000:00:1a.0: wake-up capability disabled by ACPI
+[ 1742.514525] call 0000:00:1a.0+ returned 0 after 95 usecs
+[ 1742.514535] calling  0000:00:1b.0+ @ 3109, parent: pci0000:00
+[ 1742.514619] call 0000:00:1b.0+ returned 0 after 72 usecs
+[ 1742.514628] calling  0000:00:1c.0+ @ 3109, parent: pci0000:00
+[ 1742.514748] call 0000:00:1c.0+ returned 0 after 108 usecs
+[ 1742.514758] calling  0000:00:1c.1+ @ 3109, parent: pci0000:00
+[ 1742.514875] call 0000:00:1c.1+ returned 0 after 104 usecs
+[ 1742.514884] calling  0000:00:1d.0+ @ 3109, parent: pci0000:00
+[ 1742.514969] ehci_hcd 0000:00:1d.0: wake-up capability disabled by ACPI
+[ 1742.514985] call 0000:00:1d.0+ returned 0 after 89 usecs
+[ 1742.514995] calling  0000:00:1f.0+ @ 3109, parent: pci0000:00
+[ 1742.515072] call 0000:00:1f.0+ returned 0 after 65 usecs
+[ 1742.515089] calling  0000:00:1f.2+ @ 3109, parent: pci0000:00
+[ 1742.515197] call 0000:00:1f.2+ returned 0 after 96 usecs
+[ 1742.515206] calling  0000:00:1f.3+ @ 3109, parent: pci0000:00
+[ 1742.515254] call 0000:00:1f.3+ returned 0 after 37 usecs
+[ 1742.515264] calling  0000:00:1f.6+ @ 3109, parent: pci0000:00
+[ 1742.515326] call 0000:00:1f.6+ returned 0 after 51 usecs
+[ 1742.515335] calling  0000:01:00.0+ @ 3109, parent: 0000:00:1c.0
+[ 1742.515525] call 0000:01:00.0+ returned 0 after 175 usecs
+[ 1742.515534] calling  0000:02:00.0+ @ 3109, parent: 0000:00:1c.1
+[ 1742.515777] call 0000:02:00.0+ returned 0 after 227 usecs
+[ 1742.515786] calling  0000:02:00.1+ @ 3109, parent: 0000:00:1c.1
+[ 1742.515980] call 0000:02:00.1+ returned 0 after 179 usecs
+[ 1742.516126] PM: noirq resume of devices complete after 1.829 msecs
+[ 1742.517156] PM: early resume of devices complete after 0.944 msecs
+[ 1742.517254] calling  LNXSYSTM:00+ @ 3109, parent: none
+[ 1742.517264] call LNXSYSTM:00+ returned 0 after 0 usecs
+[ 1742.517274] calling  LNXCPU:00+ @ 3109, parent: LNXSYSTM:00
+[ 1742.517292] call LNXCPU:00+ returned 0 after 8 usecs
+[ 1742.517297] [drm] Changing LVDS panel from (+hsync, +vsync) to (-hsync, -vsync)
+[ 1742.517304] calling  LNXCPU:01+ @ 3109, parent: LNXSYSTM:00
+[ 1742.517323] call LNXCPU:01+ returned 0 after 1 usecs
+[ 1742.517332] calling  device:00+ @ 3109, parent: LNXSYSTM:00
+[ 1742.517341] call device:00+ returned 0 after 0 usecs
+[ 1742.517351] calling  PNP0C0D:00+ @ 3109, parent: device:00
+[ 1742.517434] call PNP0C0D:00+ returned 0 after 71 usecs
+[ 1742.517444] calling  PNP0C0C:00+ @ 3109, parent: device:00
+[ 1742.517454] call PNP0C0C:00+ returned 0 after 0 usecs
+[ 1742.517463] calling  PNP0C0E:00+ @ 3109, parent: device:00
+[ 1742.517472] call PNP0C0E:00+ returned 0 after 0 usecs
+[ 1742.517476] calling  0000:00:00.0+ @ 2788, parent: pci0000:00
+[ 1742.517482] calling  PNP0A08:00+ @ 3109, parent: device:00
+[ 1742.517485] call 0000:00:00.0+ returned 0 after 3 usecs
+[ 1742.517490] calling  0000:00:02.0+ @ 2788, parent: pci0000:00
+[ 1742.517498] call PNP0A08:00+ returned 0 after 0 usecs
+[ 1742.517502] i915 0000:00:02.0: setting latency timer to 64
+[ 1742.517519] calling  device:01+ @ 3109, parent: PNP0A08:00
+[ 1742.517529] call device:01+ returned 0 after 0 usecs
+[ 1742.517538] calling  PNP0C02:00+ @ 3109, parent: PNP0A08:00
+[ 1742.517547] call PNP0C02:00+ returned 0 after 0 usecs
+[ 1742.517557] calling  LNXVIDEO:00+ @ 3109, parent: PNP0A08:00
+[ 1742.517566] call LNXVIDEO:00+ returned 0 after 0 usecs
+[ 1742.517576] calling  device:02+ @ 3109, parent: LNXVIDEO:00
+[ 1742.517585] call device:02+ returned 0 after 0 usecs
+[ 1742.517594] calling  device:03+ @ 3109, parent: LNXVIDEO:00
+[ 1742.517603] call device:03+ returned 0 after 0 usecs
+[ 1742.517612] calling  device:04+ @ 3109, parent: LNXVIDEO:00
+[ 1742.517622] call device:04+ returned 0 after 0 usecs
+[ 1742.517631] calling  device:05+ @ 3109, parent: LNXVIDEO:00
+[ 1742.517640] call device:05+ returned 0 after 0 usecs
+[ 1742.517649] calling  device:06+ @ 3109, parent: LNXVIDEO:00
+[ 1742.517659] call device:06+ returned 0 after 0 usecs
+[ 1742.517668] calling  device:07+ @ 3109, parent: PNP0A08:00
+[ 1742.517677] call device:07+ returned 0 after 0 usecs
+[ 1742.517686] calling  device:08+ @ 3109, parent: PNP0A08:00
+[ 1742.517695] call device:08+ returned 0 after 0 usecs
+[ 1742.517704] calling  device:09+ @ 3109, parent: PNP0A08:00
+[ 1742.517713] call device:09+ returned 0 after 0 usecs
+[ 1742.517723] calling  device:0a+ @ 3109, parent: PNP0A08:00
+[ 1742.517732] call device:0a+ returned 0 after 0 usecs
+[ 1742.517741] calling  device:0b+ @ 3109, parent: PNP0A08:00
+[ 1742.517750] call device:0b+ returned 0 after 0 usecs
+[ 1742.517759] calling  device:0c+ @ 3109, parent: PNP0A08:00
+[ 1742.517768] call device:0c+ returned 0 after 0 usecs
+[ 1742.517777] calling  device:0d+ @ 3109, parent: PNP0A08:00
+[ 1742.517786] call device:0d+ returned 0 after 0 usecs
+[ 1742.517795] calling  device:0e+ @ 3109, parent: PNP0A08:00
+[ 1742.517804] call device:0e+ returned 0 after 0 usecs
+[ 1742.517813] calling  device:0f+ @ 3109, parent: PNP0A08:00
+[ 1742.517823] call device:0f+ returned 0 after 0 usecs
+[ 1742.517831] calling  device:10+ @ 3109, parent: PNP0A08:00
+[ 1742.517841] call device:10+ returned 0 after 0 usecs
+[ 1742.517850] calling  device:11+ @ 3109, parent: device:10
+[ 1742.517859] call device:11+ returned 0 after 0 usecs
+[ 1742.517868] calling  device:12+ @ 3109, parent: device:11
+[ 1742.517877] call device:12+ returned 0 after 0 usecs
+[ 1742.517886] calling  device:13+ @ 3109, parent: device:11
+[ 1742.517895] call device:13+ returned 0 after 0 usecs
+[ 1742.517904] calling  device:14+ @ 3109, parent: device:11
+[ 1742.517913] call device:14+ returned 0 after 0 usecs
+[ 1742.517922] calling  device:15+ @ 3109, parent: device:11
+[ 1742.517931] call device:15+ returned 0 after 0 usecs
+[ 1742.517940] calling  device:16+ @ 3109, parent: device:11
+[ 1742.517949] call device:16+ returned 0 after 0 usecs
+[ 1742.517958] calling  device:17+ @ 3109, parent: device:11
+[ 1742.517967] call device:17+ returned 0 after 0 usecs
+[ 1742.517976] calling  device:18+ @ 3109, parent: PNP0A08:00
+[ 1742.517985] call device:18+ returned 0 after 0 usecs
+[ 1742.517994] calling  device:19+ @ 3109, parent: device:18
+[ 1742.518003] call device:19+ returned 0 after 0 usecs
+[ 1742.518012] calling  device:1a+ @ 3109, parent: device:19
+[ 1742.518021] call device:1a+ returned 0 after 0 usecs
+[ 1742.518030] calling  device:1b+ @ 3109, parent: device:19
+[ 1742.518039] call device:1b+ returned 0 after 0 usecs
+[ 1742.518048] calling  device:1c+ @ 3109, parent: device:19
+[ 1742.518069] call device:1c+ returned 0 after 0 usecs
+[ 1742.518078] calling  device:1d+ @ 3109, parent: device:19
+[ 1742.518087] call device:1d+ returned 0 after 0 usecs
+[ 1742.518096] calling  device:1e+ @ 3109, parent: device:19
+[ 1742.518105] call device:1e+ returned 0 after 0 usecs
+[ 1742.518114] calling  device:1f+ @ 3109, parent: device:19
+[ 1742.518123] call device:1f+ returned 0 after 0 usecs
+[ 1742.518132] calling  device:20+ @ 3109, parent: PNP0A08:00
+[ 1742.518141] call device:20+ returned 0 after 0 usecs
+[ 1742.518150] calling  PNP0C0F:00+ @ 3109, parent: device:20
+[ 1742.518160] call PNP0C0F:00+ returned 0 after 0 usecs
+[ 1742.518169] calling  PNP0C0F:01+ @ 3109, parent: device:20
+[ 1742.518178] call PNP0C0F:01+ returned 0 after 0 usecs
+[ 1742.518187] calling  PNP0C0F:02+ @ 3109, parent: device:20
+[ 1742.518196] call PNP0C0F:02+ returned 0 after 0 usecs
+[ 1742.518205] calling  PNP0C0F:03+ @ 3109, parent: device:20
+[ 1742.518215] call PNP0C0F:03+ returned 0 after 0 usecs
+[ 1742.518224] calling  PNP0C0F:04+ @ 3109, parent: device:20
+[ 1742.518233] call PNP0C0F:04+ returned 0 after 0 usecs
+[ 1742.518242] calling  PNP0C0F:05+ @ 3109, parent: device:20
+[ 1742.518251] call PNP0C0F:05+ returned 0 after 0 usecs
+[ 1742.518260] calling  PNP0C0F:06+ @ 3109, parent: device:20
+[ 1742.518269] call PNP0C0F:06+ returned 0 after 0 usecs
+[ 1742.518278] calling  PNP0C0F:07+ @ 3109, parent: device:20
+[ 1742.518287] call PNP0C0F:07+ returned 0 after 0 usecs
+[ 1742.518297] calling  PNP0C09:00+ @ 3109, parent: device:20
+[ 1742.518306] call PNP0C09:00+ returned 0 after 0 usecs
+[ 1742.518315] calling  ACPI0003:00+ @ 3109, parent: PNP0C09:00
+[ 1742.518356] calling  0000:00:1a.0+ @ 3176, parent: pci0000:00
+[ 1742.518387] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+[ 1742.518413] call 0000:00:1a.0+ returned 0 after 45 usecs
+[ 1742.518424] calling  0000:00:1b.0+ @ 3176, parent: pci0000:00
+[ 1742.518504] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[ 1742.518593] call ACPI0003:00+ returned 0 after 261 usecs
+[ 1742.518603] calling  PNP0C0A:00+ @ 3109, parent: PNP0C09:00
+[ 1742.518638] calling  0000:00:1c.0+ @ 3175, parent: pci0000:00
+[ 1742.518659] call 0000:00:1c.0+ returned 0 after 10 usecs
+[ 1742.518670] calling  0000:00:1c.1+ @ 3175, parent: pci0000:00
+[ 1742.518689] call 0000:00:1c.1+ returned 0 after 9 usecs
+[ 1742.518699] calling  0000:00:1d.0+ @ 3175, parent: pci0000:00
+[ 1742.518723] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+[ 1742.518754] call 0000:00:1d.0+ returned 0 after 43 usecs
+[ 1742.518764] calling  0000:00:1f.0+ @ 3175, parent: pci0000:00
+[ 1742.518777] call 0000:00:1f.0+ returned 0 after 3 usecs
+[ 1742.518787] calling  0000:00:1f.2+ @ 3175, parent: pci0000:00
+[ 1742.518807] ahci 0000:00:1f.2: setting latency timer to 64
+[ 1742.518834] call 0000:00:1f.2+ returned 0 after 36 usecs
+[ 1742.518845] calling  0000:00:1f.3+ @ 3175, parent: pci0000:00
+[ 1742.518856] call 0000:00:1f.3+ returned 0 after 1 usecs
+[ 1742.518866] calling  0000:00:1f.6+ @ 3175, parent: pci0000:00
+[ 1742.518876] call 0000:00:1f.6+ returned 0 after 0 usecs
+[ 1742.518886] calling  0000:01:00.0+ @ 3175, parent: 0000:00:1c.0
+[ 1742.518914] ath: phy0: ASPM enabled: 0x43
+[ 1742.518921] call 0000:01:00.0+ returned 0 after 25 usecs
+[ 1742.518931] calling  0000:02:00.0+ @ 3175, parent: 0000:00:1c.1
+[ 1742.599147] calling  0000:02:00.1+ @ 2977, parent: 0000:00:1c.1
+[ 1742.599407] call 0000:02:00.1+ returned 0 after 242 usecs
+[ 1742.599423] calling  ata1+ @ 2977, parent: 0000:00:1f.2
+[ 1742.599433] call ata1+ returned 0 after 0 usecs
+[ 1742.599442] calling  ata2+ @ 2977, parent: 0000:00:1f.2
+[ 1742.599451] call ata2+ returned 0 after 0 usecs
+[ 1742.599461] calling  ata3+ @ 2977, parent: 0000:00:1f.2
+[ 1742.599470] call ata3+ returned 0 after 0 usecs
+[ 1742.599479] calling  ata4+ @ 2977, parent: 0000:00:1f.2
+[ 1742.599488] call ata4+ returned 0 after 0 usecs
+[ 1742.599497] calling  host0+ @ 2977, parent: ata1
+[ 1742.599507] call host0+ returned 0 after 1 usecs
+[ 1742.599518] calling  host1+ @ 2977, parent: ata2
+[ 1742.599527] call host1+ returned 0 after 0 usecs
+[ 1742.599541] calling  host2+ @ 2977, parent: ata3
+[ 1742.599549] call host2+ returned 0 after 0 usecs
+[ 1742.599561] calling  host3+ @ 2977, parent: ata4
+[ 1742.599569] call host3+ returned 0 after 0 usecs
+[ 1742.599582] calling  usb1+ @ 2977, parent: 0000:00:1a.0
+[ 1742.600207] calling  usb2+ @ 3177, parent: 0000:00:1d.0
+[ 1742.600501] calling  target0:0:0+ @ 3192, parent: host0
+[ 1742.600511] call target0:0:0+ returned 0 after 0 usecs
+[ 1742.600521] calling  0:0:0:0+ @ 3192, parent: target0:0:0
+[ 1742.600771] sd 0:0:0:0: [sda] Starting disk
+[ 1742.600798] call 0:0:0:0+ returned 0 after 214 usecs
+[ 1742.615535] call PNP0C0A:00+ returned 0 after 94652 usecs
+[ 1742.615548] calling  PNP0200:00+ @ 3109, parent: device:20
+[ 1742.615557] call PNP0200:00+ returned 0 after 0 usecs
+[ 1742.615567] calling  INT0800:00+ @ 3109, parent: device:20
+[ 1742.615576] call INT0800:00+ returned 0 after 0 usecs
+[ 1742.615585] calling  PNP0103:00+ @ 3109, parent: device:20
+[ 1742.615595] call PNP0103:00+ returned 0 after 0 usecs
+[ 1742.615604] calling  PNP0000:00+ @ 3109, parent: device:20
+[ 1742.615616] call PNP0000:00+ returned 0 after 0 usecs
+[ 1742.615625] calling  PNP0C04:00+ @ 3109, parent: device:20
+[ 1742.615634] call PNP0C04:00+ returned 0 after 0 usecs
+[ 1742.615643] calling  PNP0C02:01+ @ 3109, parent: device:20
+[ 1742.615652] call PNP0C02:01+ returned 0 after 0 usecs
+[ 1742.615662] calling  PNP0B00:00+ @ 3109, parent: device:20
+[ 1742.615671] call PNP0B00:00+ returned 0 after 0 usecs
+[ 1742.615680] calling  PNP0100:00+ @ 3109, parent: device:20
+[ 1742.615689] call PNP0100:00+ returned 0 after 0 usecs
+[ 1742.615698] calling  device:21+ @ 3109, parent: device:20
+[ 1742.615708] call device:21+ returned 0 after 0 usecs
+[ 1742.615717] calling  PNP0303:00+ @ 3109, parent: device:21
+[ 1742.615726] call PNP0303:00+ returned 0 after 0 usecs
+[ 1742.615735] calling  device:22+ @ 3109, parent: PNP0A08:00
+[ 1742.615744] call device:22+ returned 0 after 0 usecs
+[ 1742.615754] calling  device:23+ @ 3109, parent: device:22
+[ 1742.615763] call device:23+ returned 0 after 0 usecs
+[ 1742.615772] calling  device:24+ @ 3109, parent: device:23
+[ 1742.615781] call device:24+ returned 0 after 0 usecs
+[ 1742.615790] calling  device:25+ @ 3109, parent: device:23
+[ 1742.615799] call device:25+ returned 0 after 0 usecs
+[ 1742.615808] calling  device:26+ @ 3109, parent: PNP0A08:00
+[ 1742.615817] call device:26+ returned 0 after 0 usecs
+[ 1742.615826] calling  device:27+ @ 3109, parent: LNXSYSTM:00
+[ 1742.615836] call device:27+ returned 0 after 0 usecs
+[ 1742.615845] calling  LNXTHERM:00+ @ 3109, parent: device:27
+[ 1742.616198] call LNXTHERM:00+ returned 0 after 335 usecs
+[ 1742.616209] calling  GGL0001:00+ @ 3109, parent: LNXSYSTM:00
+[ 1742.616218] call GGL0001:00+ returned 0 after 0 usecs
+[ 1742.616227] calling  LNXPWRBN:00+ @ 3109, parent: LNXSYSTM:00
+[ 1742.616237] call LNXPWRBN:00+ returned 0 after 0 usecs
+[ 1742.616252] calling  chromeos_acpi+ @ 3109, parent: platform
+[ 1742.616262] call chromeos_acpi+ returned 0 after 0 usecs
+[ 1742.616271] calling  ramoops.0+ @ 3109, parent: platform
+[ 1742.616280] call ramoops.0+ returned 0 after 0 usecs
+[ 1742.616292] calling  00:00+ @ 3109, parent: pnp0
+[ 1742.616300] call 00:00+ returned 0 after 0 usecs
+[ 1742.616309] calling  00:01+ @ 3109, parent: pnp0
+[ 1742.616317] call 00:01+ returned 0 after 0 usecs
+[ 1742.616326] calling  00:02+ @ 3109, parent: pnp0
+[ 1742.616335] call 00:02+ returned 0 after 1 usecs
+[ 1742.616344] calling  00:03+ @ 3109, parent: pnp0
+[ 1742.616352] call 00:03+ returned 0 after 0 usecs
+[ 1742.616360] calling  00:04+ @ 3109, parent: pnp0
+[ 1742.616368] call 00:04+ returned 0 after 0 usecs
+[ 1742.616377] calling  00:05+ @ 3109, parent: pnp0
+[ 1742.616386] call 00:05+ returned 0 after 0 usecs
+[ 1742.616394] calling  00:06+ @ 3109, parent: pnp0
+[ 1742.616402] call 00:06+ returned 0 after 0 usecs
+[ 1742.616411] calling  00:07+ @ 3109, parent: pnp0
+[ 1742.616420] call 00:07+ returned 0 after 0 usecs
+[ 1742.616428] calling  00:08+ @ 3109, parent: pnp0
+[ 1742.616438] call 00:08+ returned 0 after 1 usecs
+[ 1742.616446] calling  00:09+ @ 3109, parent: pnp0
+[ 1742.616455] call 00:09+ returned 0 after 0 usecs
+[ 1742.616516] calling  microcode+ @ 3109, parent: platform
+[ 1742.616525] call microcode+ returned 0 after 0 usecs
+[ 1742.616536] calling  alarmtimer+ @ 3109, parent: platform
+[ 1742.616546] call alarmtimer+ returned 0 after 0 usecs
+[ 1742.616560] calling  input0+ @ 3109, parent: PNP0C0D:00
+[ 1742.616570] call input0+ returned 0 after 0 usecs
+[ 1742.616579] calling  input1+ @ 3109, parent: PNP0C0C:00
+[ 1742.616608] call input1+ returned 0 after 18 usecs
+[ 1742.616629] calling  input2+ @ 3109, parent: PNP0C0E:00
+[ 1742.616652] call input2+ returned 0 after 14 usecs
+[ 1742.616666] calling  input3+ @ 3109, parent: LNXPWRBN:00
+[ 1742.616688] call input3+ returned 0 after 13 usecs
+[ 1742.616701] calling  input4+ @ 3109, parent: LNXVIDEO:00
+[ 1742.616726] call input4+ returned 0 after 15 usecs
+[ 1742.616755] calling  tpm_tis+ @ 3109, parent: platform
+[ 1742.616765] call tpm_tis+ returned 0 after 0 usecs
+[ 1742.618830] [drm] Enabling RC6 states: RC6 on, RC6p off, RC6pp off
+[ 1742.619111] call usb1+ returned 0 after 19062 usecs
+[ 1742.619132] calling  1-1+ @ 3192, parent: usb1
+[ 1742.620350] CPU1: Package power limit notification (total events = 1)
+[ 1742.620359] CPU0: Package power limit notification (total events = 1)
+[ 1742.620455] CPU1: Package power limit normal
+[ 1742.620523] CPU0: Package power limit normal
+[ 1742.641123] call usb2+ returned 0 after 39947 usecs
+[ 1742.641146] calling  2-1+ @ 3196, parent: usb2
+[ 1742.678649] call 2-1+ returned 0 after 36614 usecs
+[ 1742.757094] call 1-1+ returned 0 after 134723 usecs
+[ 1742.757119] calling  1-1.3+ @ 3200, parent: 1-1
+[ 1742.757128] call 1-1.3+ returned 0 after 0 usecs
+[ 1742.757143] calling  1-1.1+ @ 3205, parent: 1-1
+[ 1742.757150] call 1-1.1+ returned 0 after 0 usecs
+[ 1742.780847] call 0000:00:02.0+ returned 0 after 257187 usecs
+[ 1742.780861] calling  controlD64+ @ 3109, parent: 0000:00:02.0
+[ 1742.780871] call controlD64+ returned 0 after 0 usecs
+[ 1742.780882] calling  card0+ @ 3109, parent: 0000:00:02.0
+[ 1742.780891] call card0+ returned 0 after 0 usecs
+[ 1742.780900] calling  i2c-0+ @ 3109, parent: 0000:00:02.0
+[ 1742.780909] call i2c-0+ returned 0 after 0 usecs
+[ 1742.780918] calling  i2c-1+ @ 3109, parent: 0000:00:02.0
+[ 1742.780926] call i2c-1+ returned 0 after 0 usecs
+[ 1742.780935] calling  i2c-2+ @ 3109, parent: 0000:00:02.0
+[ 1742.780944] call i2c-2+ returned 0 after 0 usecs
+[ 1742.780952] calling  i2c-3+ @ 3109, parent: 0000:00:02.0
+[ 1742.780961] call i2c-3+ returned 0 after 0 usecs
+[ 1742.780970] calling  i2c-4+ @ 3109, parent: 0000:00:02.0
+[ 1742.780979] call i2c-4+ returned 0 after 0 usecs
+[ 1742.780987] calling  i2c-5+ @ 3109, parent: 0000:00:02.0
+[ 1742.780996] call i2c-5+ returned 0 after 0 usecs
+[ 1742.781005] calling  card0-LVDS-1+ @ 3109, parent: card0
+[ 1742.781014] call card0-LVDS-1+ returned 0 after 0 usecs
+[ 1742.781024] calling  intel_backlight+ @ 3109, parent: card0-LVDS-1
+[ 1742.781035] call intel_backlight+ returned 0 after 0 usecs
+[ 1742.781048] calling  card0-VGA-1+ @ 3109, parent: card0
+[ 1742.781057] call card0-VGA-1+ returned 0 after 0 usecs
+[ 1742.781066] calling  card0-HDMI-A-1+ @ 3109, parent: card0
+[ 1742.781076] call card0-HDMI-A-1+ returned 0 after 0 usecs
+[ 1742.781085] calling  card0-DP-1+ @ 3109, parent: card0
+[ 1742.781094] call card0-DP-1+ returned 0 after 0 usecs
+[ 1742.781103] calling  i2c-6+ @ 3109, parent: card0-DP-1
+[ 1742.781112] call i2c-6+ returned 0 after 0 usecs
+[ 1742.781153] calling  i8042+ @ 3109, parent: platform
+[ 1742.785304] call i8042+ returned 0 after 4044 usecs
+[ 1742.785321] calling  serio0+ @ 3109, parent: i8042
+[ 1742.785332] call serio0+ returned 0 after 2 usecs
+[ 1742.787722] calling  i2c-7+ @ 3109, parent: 0000:00:1f.3
+[ 1742.787731] call i2c-7+ returned 0 after 0 usecs
+[ 1742.787740] calling  coretemp.0+ @ 3109, parent: platform
+[ 1742.787750] call coretemp.0+ returned 0 after 0 usecs
+[ 1742.787760] calling  gsmi+ @ 3109, parent: platform
+[ 1742.787769] call gsmi+ returned 0 after 0 usecs
+[ 1742.787778] calling  7-0067+ @ 3109, parent: i2c-7
+[ 1742.793874] call 7-0067+ returned 0 after 5942 usecs
+[ 1742.794897] calling  input5+ @ 3109, parent: 7-0067
+[ 1742.794924] call input5+ returned 0 after 14 usecs
+[ 1742.794935] calling  input6+ @ 3109, parent: serio0
+[ 1742.794966] call input6+ returned 0 after 21 usecs
+[ 1742.795033] calling  regulatory.0+ @ 3109, parent: platform
+[ 1742.795053] call regulatory.0+ returned 0 after 0 usecs
+[ 1743.079119] call 0000:02:00.0+ returned 0 after 547062 usecs
+[ 1743.079160] calling  mmc0::+ @ 3109, parent: 0000:02:00.1
+[ 1743.079183] call mmc0::+ returned 0 after 9 usecs
+[ 1743.282629] call 0000:00:1b.0+ returned 0 after 746300 usecs
+[ 1743.282721] calling  input7+ @ 3109, parent: card0
+[ 1743.282738] call input7+ returned 0 after 0 usecs
+[ 1743.282752] calling  input8+ @ 3109, parent: card0
+[ 1743.282764] call input8+ returned 0 after 0 usecs
+[ 1743.282777] calling  input9+ @ 3109, parent: card0
+[ 1743.282788] call input9+ returned 0 after 0 usecs
+[ 1743.282801] calling  input10+ @ 3109, parent: card0
+[ 1743.282813] call input10+ returned 0 after 0 usecs
+[ 1743.282826] calling  input11+ @ 3109, parent: card0
+[ 1743.282838] call input11+ returned 0 after 0 usecs
+[ 1743.282862] calling  phy0+ @ 3109, parent: 0000:01:00.0
+[ 1743.326776] wlan0: dropped data frame to not associated station 00:00:00:00:00:00
+[ 1743.326793] call phy0+ returned 0 after 42891 usecs
+[ 1743.326804] calling  rfkill0+ @ 3109, parent: phy0
+[ 1743.326843] call rfkill0+ returned 0 after 29 usecs
+[ 1743.329906] calling  ath9k-phy0+ @ 3109, parent: 0000:01:00.0
+[ 1743.329917] call ath9k-phy0+ returned 0 after 0 usecs
+[ 1743.329935] calling  rfkill1+ @ 3109, parent: hci0
+[ 1743.329961] call rfkill1+ returned 0 after 16 usecs
+[ 1743.329975] PM: resume of devices complete after 812.825 msecs
+[ 1743.330095] PM: Finishing wakeup.
+[ 1743.330098] Restarting tasks ... 
+[ 1743.332220] usb 1-1.1: USB disconnect, device number 5
+[ 1743.359201] done.
+[ 1743.359215] video LNXVIDEO:00: Restoring backlight state
+[ 1743.395125] usb 1-1.1: new full-speed USB device number 6 using ehci_hcd
+[ 1743.460390] ieee80211 phy0: device no longer idle - scanning
+[ 1743.487488] usb 1-1.1: string descriptor 0 read error: -22
+[ 1743.487505] usb 1-1.1: New USB device found, idVendor=0489, idProduct=e04e
+[ 1743.487517] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1743.547111] usb 1-1.3: USB disconnect, device number 4
+[ 1743.620164] usb 1-1.3: new high-speed USB device number 7 using ehci_hcd
+[ 1743.759166] usb 1-1.3: New USB device found, idVendor=064e, idProduct=d251
+[ 1743.759188] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1743.759205] usb 1-1.3: Product: HD WebCam
+[ 1743.759215] usb 1-1.3: Manufacturer: SuYin
+[ 1743.759233] usb 1-1.3: SerialNumber: HF1016-A21U-OV02-VA-R01.00.03
+[ 1743.761978] uvcvideo: Found UVC 1.00 device HD WebCam (064e:d251)
+[ 1743.780350] usb 1-1.1: USB disconnect, device number 6
+[ 1743.787338] mmc0: new high speed SDHC card at address 0007
+[ 1743.958266] usb 1-1.1: new full-speed USB device number 8 using ehci_hcd
+[ 1744.044722] usb 1-1.1: string descriptor 0 read error: -22
+[ 1744.044743] usb 1-1.1: New USB device found, idVendor=0489, idProduct=e04e
+[ 1744.044760] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1745.065115] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[ 1745.069956] ata1.00: configured for UDMA/133
+[ 1745.253782] mmcblk0: mmc0:0007 SD16G 14.9 GiB 
+[ 1745.256013]  mmcblk0: p1 p2
+[ 1747.414005] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1747.417443] ieee80211 phy0: device now idle
+[ 1784.855595] ieee80211 phy0: device no longer idle - scanning
+[ 1788.766277] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1788.775302] ieee80211 phy0: device now idle
+[ 1824.410804] tg3 0000:02:00.0: eth0: Link is up at 100 Mbps, full duplex
+[ 1824.410825] tg3 0000:02:00.0: eth0: Flow control is on for TX and on for RX
+[ 1824.410841] tg3 0000:02:00.0: eth0: EEE is disabled
+[ 1824.411339] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[ 1824.411433] RTM_NEWLINK: idx=3, flags=0x11043, deliver=0, fail=0, congest=0
+[ 1824.411474] RTM_NEWLINK: idx=3, flags=0x11043, deliver=2, fail=0, congest=0
+[ 1824.413816] RTM_NEWLINK: idx=3, flags=0x11043, deliver=0, fail=0, congest=0
+[ 1835.255632] eth0: no IPv6 routers present
+[ 1844.854491] ieee80211 phy0: device no longer idle - scanning
+[ 1848.762304] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 1848.769921] ieee80211 phy0: device now idle
+[ 1866.776987] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+[ 1866.938962] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+[ 2028.812147] ieee80211 phy0: device no longer idle - scanning
+[ 2032.717733] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2032.723627] ieee80211 phy0: device now idle
+[ 2212.733864] ieee80211 phy0: device no longer idle - scanning
+[ 2216.637748] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2216.644118] ieee80211 phy0: device now idle
+[ 2396.677526] ieee80211 phy0: device no longer idle - scanning
+[ 2400.583015] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2400.588566] ieee80211 phy0: device now idle
+[ 2580.597507] ieee80211 phy0: device no longer idle - scanning
+[ 2584.504828] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2584.508491] ieee80211 phy0: device now idle
+[ 2764.540913] ieee80211 phy0: device no longer idle - scanning
+[ 2768.449393] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2768.451883] ieee80211 phy0: device now idle
+[ 2948.479966] ieee80211 phy0: device no longer idle - scanning
+[ 2952.385274] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 2952.391167] ieee80211 phy0: device now idle
+[ 3132.396576] ieee80211 phy0: device no longer idle - scanning
+[ 3136.301434] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 3136.305941] ieee80211 phy0: device now idle
+[ 3316.329822] ieee80211 phy0: device no longer idle - scanning
+[ 3320.233751] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 3320.240196] ieee80211 phy0: device now idle
+[ 3500.249504] ieee80211 phy0: device no longer idle - scanning
+[ 3504.153460] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 3504.159259] ieee80211 phy0: device now idle
+[ 3649.333321] usb 2-1.2: new high-speed USB device number 3 using ehci_hcd
+[ 3649.581309] usb 2-1.2: New USB device found, idVendor=058f, idProduct=6387
+[ 3649.581332] usb 2-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 3649.581349] usb 2-1.2: Product: Mass Storage
+[ 3649.581360] usb 2-1.2: Manufacturer: Generic
+[ 3649.581371] usb 2-1.2: SerialNumber: D7DD318D
+[ 3649.582593] scsi4 : usb-storage 2-1.2:1.0
+[ 3650.585336] scsi 4:0:0:0: Direct-Access     Generic  Flash Disk       8.07 PQ: 0 ANSI: 2
+[ 3650.587418] sd 4:0:0:0: [sdb] 16404480 512-byte logical blocks: (8.39 GB/7.82 GiB)
+[ 3650.588145] sd 4:0:0:0: [sdb] Write Protect is off
+[ 3650.588161] sd 4:0:0:0: [sdb] Mode Sense: 03 00 00 00
+[ 3650.588657] sd 4:0:0:0: [sdb] No Caching mode page present
+[ 3650.588670] sd 4:0:0:0: [sdb] Assuming drive cache: write through
+[ 3650.593203] sd 4:0:0:0: [sdb] No Caching mode page present
+[ 3650.593221] sd 4:0:0:0: [sdb] Assuming drive cache: write through
+[ 3651.053931]  sdb: sdb1
+[ 3651.056511] sd 4:0:0:0: [sdb] No Caching mode page present
+[ 3651.056524] sd 4:0:0:0: [sdb] Assuming drive cache: write through
+[ 3651.056535] sd 4:0:0:0: [sdb] Attached SCSI removable disk
+[ 3684.159347] ieee80211 phy0: device no longer idle - scanning
+[ 3688.066038] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 3688.069511] ieee80211 phy0: device now idle
+[ 3868.100950] ieee80211 phy0: device no longer idle - scanning
+[ 3872.005370] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 3872.010904] ieee80211 phy0: device now idle
+[ 4052.017064] ieee80211 phy0: device no longer idle - scanning
+[ 4055.921378] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4055.927780] ieee80211 phy0: device now idle
+[ 4144.499633] usb 2-1.2: USB disconnect, device number 3
+[ 4235.952609] ieee80211 phy0: device no longer idle - scanning
+[ 4239.860129] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4239.862945] ieee80211 phy0: device now idle
+[ 4419.890157] ieee80211 phy0: device no longer idle - scanning
+[ 4423.795416] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4423.801140] ieee80211 phy0: device now idle
+[ 4603.800663] ieee80211 phy0: device no longer idle - scanning
+[ 4607.707117] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4607.710226] ieee80211 phy0: device now idle
+[ 4787.738392] ieee80211 phy0: device no longer idle - scanning
+[ 4791.641825] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4791.648414] ieee80211 phy0: device now idle
+[ 4971.647259] ieee80211 phy0: device no longer idle - scanning
+[ 4975.551152] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 4975.557643] ieee80211 phy0: device now idle
+[ 5155.556361] ieee80211 phy0: device no longer idle - scanning
+[ 5159.462322] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 5159.466749] ieee80211 phy0: device now idle
+[ 5339.492336] ieee80211 phy0: device no longer idle - scanning
+[ 5343.398008] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 5343.403382] ieee80211 phy0: device now idle
+[ 5523.410911] ieee80211 phy0: device no longer idle - scanning
+[ 5527.315688] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 5527.322081] ieee80211 phy0: device now idle
+[ 5707.351593] ieee80211 phy0: device no longer idle - scanning
+[ 5711.259422] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 5711.262260] ieee80211 phy0: device now idle
+[ 5891.289944] ieee80211 phy0: device no longer idle - scanning
+[ 5895.194064] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 5895.200839] ieee80211 phy0: device now idle
+[ 6075.211003] ieee80211 phy0: device no longer idle - scanning
+[ 6079.116432] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6079.120598] ieee80211 phy0: device now idle
+[ 6259.146890] ieee80211 phy0: device no longer idle - scanning
+[ 6263.051398] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6263.057741] ieee80211 phy0: device now idle
+[ 6443.061021] ieee80211 phy0: device no longer idle - scanning
+[ 6446.966767] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6446.972268] ieee80211 phy0: device now idle
+[ 6626.981570] ieee80211 phy0: device no longer idle - scanning
+[ 6630.884724] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6630.891101] ieee80211 phy0: device now idle
+[ 6810.918475] ieee80211 phy0: device no longer idle - scanning
+[ 6814.823164] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6814.829509] ieee80211 phy0: device now idle
+[ 6994.839915] ieee80211 phy0: device no longer idle - scanning
+[ 6998.747440] RTM_NEWLINK: idx=4, flags=0x1003, deliver=2, fail=0, congest=0
+[ 6998.750350] ieee80211 phy0: device now idle
+[ 7039.942179] usb 2-1.2: new high-speed USB device number 4 using ehci_hcd
+[ 7040.190058] usb 2-1.2: New USB device found, idVendor=058f, idProduct=6387
+[ 7040.190080] usb 2-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 7040.190098] usb 2-1.2: Product: Mass Storage
+[ 7040.190109] usb 2-1.2: Manufacturer: Generic
+[ 7040.190119] usb 2-1.2: SerialNumber: D7DD318D
+[ 7040.191166] scsi5 : usb-storage 2-1.2:1.0
+[ 7041.194114] scsi 5:0:0:0: Direct-Access     Generic  Flash Disk       8.07 PQ: 0 ANSI: 2
+[ 7041.196339] sd 5:0:0:0: [sdb] 16404480 512-byte logical blocks: (8.39 GB/7.82 GiB)
+[ 7041.196912] sd 5:0:0:0: [sdb] Write Protect is off
+[ 7041.196931] sd 5:0:0:0: [sdb] Mode Sense: 03 00 00 00
+[ 7041.197400] sd 5:0:0:0: [sdb] No Caching mode page present
+[ 7041.197413] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7041.201229] sd 5:0:0:0: [sdb] No Caching mode page present
+[ 7041.201247] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7041.526765]  sdb: sdb1
+[ 7041.529970] sd 5:0:0:0: [sdb] No Caching mode page present
+[ 7041.529988] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7041.530003] sd 5:0:0:0: [sdb] Attached SCSI removable disk

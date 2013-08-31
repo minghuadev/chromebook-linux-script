@@ -1,0 +1,12 @@
+
+
+~/.netrc with machine credentials
+
+
+ref: http://stackoverflow.com/questions/3562095/using-curl-to-get-a-https-webpage-in-windows-7
+  http://curl.haxx.se/ca/cacert.pem  for https certificates.
+
+git config user.name <yourname>
+git config user.email <youremail@your.com>
+
+

@@ -1,0 +1,24 @@
+
+
+Remove accidental file Rakefile from git: 
+===========================================
+$ git clone ...
+$ git filter-branch --force --index-filter \
+  'git rm --cached --ignore-unmatch Rakefile' \
+  --prune-empty --tag-name-filter cat -- --all
+$ git push origin master --force
+
+
+Reclaim space from git: 
+=========================
+$ rm -rf .git/refs/original/
+$ git reflog expire --expire=now --all
+$ git gc --prune=now
+$ git gc --aggressive --prune=now
+
+
+Avoid RPC error in bit push:
+==============================
+$ git config http.postBuffer 524288000
+
+
