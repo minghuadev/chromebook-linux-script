@@ -1,0 +1,221 @@
+
+kde menu apps:
+================
+
+development/translation/lokalize (computer-aided translation system)
+development/web development/klmagemapedit (html image map editor)
+                            klinkstatus (linkchecker)
+
+development/cervisia (cvs front end)
+            kapptemplate (kde template generator)
+            kcachegrind (profiler grontend)
+            kompare (diff/patch frontend)
+            kuiviewer (qt designer ui file viewer)
+            umbrello (uml modeller)
+
+education/languages/kanagram (letter order game)
+                    khangman (hangman game)
+                    klettres (learn the alphabet)
+                    kwordquiz (flash card trainer)
+                    parley (vocabulary trainer)
+
+          mathematics/kalgebra (graph calculator)
+                      kbrunch (exercise fractions)
+                      kig (interactive geometry)
+                      kmplot (mathematical function plotter)
+
+          miscellaneous/kgeography (geography trainer)
+                        ktouch (touch typing tutor)
+                        kturtle (educational programming environment)
+                        marble (desktop globe)
+                        step (interactive physical simulator)
+
+          science/kalzium (periodic table of elements)
+                  kstars (desktop planetarium)
+                  rocs graph theory
+
+game/arcade/...
+     board games/...
+     card games/aisleriot solitaire
+                freecell solitaire
+                ...
+     games for kids/...
+     logic games/...
+     tactics & strategy/...
+     toys/amor (on-screen creature)
+     amor (on-screen creature)
+
+graphics/document viewer
+         gwenview (image viewer)
+         image viewer
+         kolourpaint (paint program)
+         ksnapshot (screen capture program)
+         libreoffice draw (drawing program)
+         okular (document viewer)
+         shotwell (photo manager)
+         simple scan 
+         more applications/kcolorchooser (color chooser)
+                           kruler (screen ruler)
+
+internet/akregator (feed reader)
+         blogilo (a kde blogging client)
+         empathy (im client)
+         firefox web browser
+         google chrome (web browser)
+         gwibber (social client)
+         kget (download manager)
+         kmail (mail client)
+         knode (news reader)
+         konqueror (web browser)
+         kopete (instant messenger)
+         kppp (internet dial-up tool)
+         krdc (remote desktop client)
+         krfb (desktop sharing)
+         kvpnc (vpn client gui)
+         remmina remote desktop client
+         thunderbird mail (mail client)
+         transmission (bittorrent client)
+
+multimedia/brasero (disc burner and copier)
+           cheese
+           dragon player (video player)
+           juk (music player)
+           kmix (sound mixer)
+           kscd (cd player)
+           movie player
+           rhythmbox (music player)
+           sound recorder
+
+office/document viewer
+       kaddressbook (contact manager)
+       kontact (personal information manager)
+       korganizer (personal organizer)
+       ktimetracker (personal time tracker)
+       libreoffice calc, draw, impress, writer
+       libreoffice
+       lokalize (computer-aided translation system)
+       okular (document viewer)
+
+settings/backup
+         broadcast accounts
+         broadcast preferences
+         disk utility
+         keyboard input methods
+         messaging and voip accounts
+         network tools
+         onboard settings..oard onscreen keyboard settings)
+         passwords and keys
+         startup disk creator
+         system settings
+         system testing
+         ubuntu one
+         ubuntu software center
+         update manager (software updates)
+
+system/backup
+       dolphin (file manager)
+       ibus (input method framework)
+       kdiskfree (view disk usage)
+       kinfocenter (info center)
+       konsole (terminal)
+       krandrtray (screen resize & rotate)
+       krfb (desktop sharing)
+       ksystemlog (system log viewer)
+       kuser (user manager)
+       kwalletmanager (wallet management tool)
+       kwikdisk (removable media utility)
+       nepomuk backup
+       nepomuk file indexing controller
+       network tools
+       startup disk creator
+       system monitor
+       system monitor
+       system testing
+       ubuntu software center
+       update manager (software updates)
+       uxterm
+       xterm
+
+utilities/
+    akonaditray (akonadi tray utility)
+    archive manager
+    ark (archiving tool)
+    backup
+    calculator
+    character map
+    disk utility
+    filelight (disk usage statistics)
+    gedit (text editor)
+     ibus (input method framework)
+    lovie
+    kalarm (personal alarm scheduler)
+    kate (advanced text editor)
+    kcalc (scientific calculator)
+    kcharselect (character selector)
+    kfilereplace (search & replace tool)
+    kgpg (encryption tool)
+    kjots (note taker)
+    klipper (clipboard tool)
+    kmag (screen magnifier)
+    kmousetool (automatic mouse click)
+    kmouth (speech synthesizer frontend)
+    knotes (popup notes)
+    kteatime (tea cooker)
+    ktimer (countdown launcher)
+    ktimertracker (personal time tracker)
+    kwrite (text editor)
+    okteta (hex editor)
+    onboard onscreen keyboard
+    onboard settings..oard onscreen keyboard settings)
+    orca (screen reader)
+    superkaramba (desktop widgets)
+    sweeper (system cleaner)
+    synaptiks (touchpad management)
+    xdiagnose
+
+
+system settings:
+==================
+
+common appearance and behavior
+    account details 
+    application appearance
+    application and system notifications 
+    file associations
+    locale
+    personal information
+    shortcuts and gestures
+
+workspace appearance and behavior
+    desktop effects
+    workspace appearance
+    accessibility
+    default applications
+    desktop search
+    window behavior
+    workspace behavior
+
+network and connectivity
+    network settings
+    ssl preferences
+    sharing
+
+hardware
+    printer configuration 
+    device actions
+    digital camera
+    display and monitor
+    information sources
+    input devices
+    power management
+    removable devices
+    multimedia
+
+system administration
+    date & time
+    font management
+    login screen
+    startup and shutdown
+    task scheduler
+
+
