@@ -101,3 +101,12 @@ Notes how to reuse the stock kernel:
   reprioritize partition #6 and mark it as having booted successfully.
     $ cgpt add /dev/sdb -i 6 -P 1 -T 0 -S 1
 
+
+Notes how to reuse the stock kernel:
+======================================
+  see googlecode project java-on-chromebook, run commands below:
+
+    $ sudo /usr/share/vboot/bin/make_dev_ssd.sh --partitions 2 --remove_rootfs_verification
+    $ sudo /usr/share/vboot/bin/make_dev_ssd.sh --partitions 4 --remove_rootfs_verification
+
+
