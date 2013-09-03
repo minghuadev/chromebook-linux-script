@@ -87,6 +87,54 @@ clean up space:
   ...it takes 2.5 hours...
 
 
+push to chromeos-kernel-3.8
+=============================
+git log --pretty=format:%h | wc
+353890
+
+git log --pretty=format:%h >ttspecslist
+wc ttspecslist 
+  353890 353891 ...
+
+[kernel-next]$ tail ttspecslist 
+e493073
+81ddef7
+9ffb714
+d42ce81
+7a228aa
+7aa52f5
+2d137c2
+baaa2c5
+8d38ead
+
+
+#!/bin/bash -x
+n=353890
+while true
+do
+    n=$(($n-1))
+    if [ $n -le 1 ]; then 
+        echo "  escape pushing at ~$n"
+        break
+    fi
+    echo git push origin2 master~$n
+    #git push origin2 master~$n
+    if [ $? -eq 0 ]; then 
+        echo "  ok pushed ~$n"
+    else
+        echo "  failed pushing ~$n"
+        break
+    fi
+    sleep 10
+
+done
+
+
+[kernel-next]$ git push origin2 8d38ead:refs/heads/master
+  49.92 MiB,  18200 objects
+
+
+
 reference links
 =================
 
