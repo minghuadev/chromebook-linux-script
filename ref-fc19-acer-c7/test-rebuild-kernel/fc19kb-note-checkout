@@ -1,0 +1,95 @@
+
+
+2013-9-2
+
+
+cloning kernel-next
+=====================
+ this takes 31 minutes with 1.2G disk space used.
+
+  git clone https://git.chromium.org/git/chromiumos/third_party/kernel-next.git
+
+
+checkout origin/chromeos-3.8 
+==============================
+ it takes 30 seconds with 1.4G space on disk.
+
+  git checkout origin/chromeos-3.8
+
+  [kernel-next]$ git branch
+  * (detached from origin/chromeos-3.8)
+    master
+
+  [kernel-next]$ git reflog
+  98d6fa9 HEAD@{0}: checkout: moving from master to origin/chromeos-3.8
+  9fe6206 HEAD@{1}: clone: from https://git.chromium.org/git/chromiumos/third_part
+
+  [kernel-next]$ git log
+  commit 98d6fa96d08dbb08a2150dcd48a6b2a8773172e0
+  Author: Arun Mankuzhi <arun.m@samsung.com>
+  Date:   Mon Jul 29 19:06:14 2013 +0530
+
+      exynos5420: devfreq: Remove aclk333 from devfreq
+    
+  commit d4e407dfb5bea11f4aa844f8a3c7aa7d68d139ae
+  Author: Todd Poynor <toddpoynor@google.com>
+  Date:   Thu Dec 20 15:51:00 2012 -0800
+
+      CHROMIUM: cpufreq: interactive: fix race on timer restart on governor start
+
+  [kernel-next]$ git log g --pretty=format:%h/%ad/%s
+  98d6fa9/Mon Jul 29 19:06:14 2013 +0530/exynos5420: devfreq: Remove aclk333 from 
+  d4e407d/Thu Dec 20 15:51:00 2012 -0800/CHROMIUM: cpufreq: interactive: fix race 
+  dc72ff7/Tue Dec 18 17:50:44 2012 -0800/CHROMIUM: cpufreq: interactive: fix racy 
+  1591e40/Thu Aug 8 17:37:59 2013 +0900/drm: exynos : restore lost configuration o
+  98b5ea9/Thu Aug 22 09:41:36 2013 +0530/usb: dwc3: Make fetching of usb-phys conf
+  a17bb9a/Thu Aug 22 09:52:40 2013 +0530/usb: phy: Cleanup error code in **_usb_ge
+  312fa31/Fri Aug 23 18:57:17 2013 +0530/CHROMIUM: s5p-mfc: fix encoder bitrate de
+  7df6584/Fri May 3 12:15:40 2013 -0300/UPSTREAM: drm/i915: only disable DDI sound
+  85a8b9a/Tue Jan 22 23:25:25 2013 +0800/UPSTREAM: drm/i915: HDMI/DP - ELD info re
+  8f07aee/Tue Aug 20 22:00:56 2013 +0900/arm: dts: peach: Enable internal FIMD dit
+  cf3cbc8/Tue Aug 20 21:57:54 2013 +0900/arm: dts: snow: Enable MIE dithering feat
+  022de32/Tue Aug 20 13:09:50 2013 -0700/CHROMIUM: ALSA: hda/realtek - Override DA
+
+  [kernel-next]$ git log -4 --pretty=format:%h/%cd
+  98d6fa9/Mon Aug 26 16:03:05 2013 -0700
+  d4e407d/Mon Aug 26 16:03:04 2013 -0700
+  dc72ff7/Mon Aug 26 16:03:01 2013 -0700
+  1591e40/Mon Aug 26 16:02:54 2013 -0700
+
+
+merge down the branch:
+========================
+
+    git branch -b chromeos38priv
+    git checkout -b chromeos38priv
+    git checkout master
+    git tag priv-master
+    git merge chromeos38priv
+    git tag priv-chrome38sep2
+
+
+clean up space:
+=================
+
+  git branch -d chromeos38priv
+  git reflog
+
+  [kernel-next]$ git reflog
+  98d6fa9 HEAD@{0}: merge chromeos38priv: Fast-forward
+  9fe6206 HEAD@{1}: checkout: moving from chromeos38priv to master
+  98d6fa9 HEAD@{2}: checkout: moving from 98d6fa96d08dbb08a2150dcd48a6b2a8773172e0 to chromeos38priv
+  98d6fa9 HEAD@{3}: checkout: moving from master to origin/chromeos-3.8
+  9fe6206 HEAD@{4}: clone: from https://git.chromium.org/git/chromiumos/third_party/kernel-next.git
+
+  [kernel-next]$ git reflog expire --expire=now --all
+  [kernel-next]$ git gc --prune=now && git gc --aggressive --prune=now
+  ...it takes 2.5 hours...
+
+
+reference links
+=================
+
+  http://code.google.com/p/chromebook-linux/source/browse/a-setup/note-tips
+  http://www.chromium.org/chromium-os
+
