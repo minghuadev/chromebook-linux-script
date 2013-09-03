@@ -86,6 +86,16 @@ clean up space:
   [kernel-next]$ git gc --prune=now && git gc --aggressive --prune=now
   ...it takes 2.5 hours...
 
+  space used before and after in .git:
+  [kernel-next]$ du -sh .git
+  769M    .git
+  [kernel-next]$ du -sh .
+  1.4G    .
+  [kernel-next]$ du -sh .
+  1.3G    .
+  [kernel-next]$ du -sh .git
+  664M    .git
+
 
 push to chromeos-kernel-3.8
 =============================
@@ -107,32 +117,37 @@ d42ce81
 baaa2c5
 8d38ead
 
+[kernel-next]$ git push origin2 8d38ead:refs/heads/master
+  49.92 MiB,  18200 objects
+
+[kernel-next]$ git log --pretty=oneline master~44900
+8d38eadb7a97f265f7b3a9e8a30df358c3a546c8 [PATCH] mmtimer build fix
+1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 Linux-2.6.12-rc2
 
 #!/bin/bash -x
-n=353890
+n=44900
 while true
 do
-    n=$(($n-1))
     if [ $n -le 1 ]; then 
         echo "  escape pushing at ~$n"
         break
     fi
-    echo git push origin2 master~$n
-    #git push origin2 master~$n
+    echo git push origin2 master~$n:refs/heads/master
+    #git push origin2 master~$n:refs/heads/master
     if [ $? -eq 0 ]; then 
         echo "  ok pushed ~$n"
     else
         echo "  failed pushing ~$n"
         break
     fi
+    n=$(($n-1))  # or -50 to go fast
     sleep 10
-
 done
+echo pushed till $n
 
-
-[kernel-next]$ git push origin2 8d38ead:refs/heads/master
-  49.92 MiB,  18200 objects
-
+use dec 50, pushing 44900 to 42000 used 30 minutes. 42000-39600/30m.
+                                                    39600-37400/15m.
+use dec 500, pushing 37400..32400/28min. 32000..24500/34m.
 
 
 reference links
