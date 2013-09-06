@@ -116,9 +116,14 @@ d42ce81
 2d137c2
 baaa2c5
 8d38ead
+1da177e
 
 [kernel-next]$ git push origin2 8d38ead:refs/heads/master
   49.92 MiB,  18200 objects
+
+[vser@localhost kernel-next]$ git log --pretty=oneline HEAD~44900
+8d38eadb7a97f265f7b3a9e8a30df358c3a546c8 [PATCH] mmtimer build fix
+1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 Linux-2.6.12-rc2
 
 [kernel-next]$ git log --pretty=oneline master~44900
 8d38eadb7a97f265f7b3a9e8a30df358c3a546c8 [PATCH] mmtimer build fix
@@ -148,6 +153,10 @@ echo pushed till $n
 use dec 50, pushing 44900 to 42000 used 30 minutes. 42000-39600/30m.
                                                     39600-37400/15m.
 use dec 500, pushing 37400..32400/28min. 32000..24500/34m.
+use different net: 24500..19000/88min, ..16000..12500.. 
+use dec 200, 100, 20, 10, 1 ...: it starts to be fast at around 4000..2000
+finishes last 1814 in one run.
+but it keeps failing: git push --tags origin2
 
 
 reference links
