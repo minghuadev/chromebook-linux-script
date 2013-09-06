@@ -21,4 +21,5 @@ Avoid RPC error in bit push:
 ==============================
 $ git config http.postBuffer 524288000
 
+Set GIT_CURL_VERBOSE=1 to push if you see rpc error with result=18.
 
