@@ -9,6 +9,18 @@ cloning kernel-next
 
   git clone https://git.chromium.org/git/chromiumos/third_party/kernel-next.git
 
+  [kernel-next]$ git log 
+    commit 9fe6206f400646a2322096b56c59891d530e8d51
+    Author: Linus Torvalds <torvalds@linux-foundation.org>
+    Date:   Sun Aug 1 15:11:14 2010 -0700
+        Linux 2.6.35
+    commit 77a63f3d1e0a3e7ede8d10f569e8481b13ff47c5
+
+  [kernel-next]$ git tag
+    v3.0.1 v3.0.2 v3.0.3 v3.0.4 v3.0.5 v3.0.6 v3.0.7 v3.0.8
+    v3.2 v3.3 v3.4-rc1 v3.4-rc4 v3.4-rc5 v3.4-rc6 v3.4-rc7
+    v3.5 v3.6 v3.7 v3.7-rc8 v3.8 v3.8.11 v3.10 v3.10.1 v3.10.7
+
 
 checkout origin/chromeos-3.8 
 ==============================
@@ -37,7 +49,7 @@ checkout origin/chromeos-3.8
 
       CHROMIUM: cpufreq: interactive: fix race on timer restart on governor start
 
-  [kernel-next]$ git log g --pretty=format:%h/%ad/%s
+  [kernel-next]$ git log --pretty=format:%h/%ad/%s
   98d6fa9/Mon Jul 29 19:06:14 2013 +0530/exynos5420: devfreq: Remove aclk333 from 
   d4e407d/Thu Dec 20 15:51:00 2012 -0800/CHROMIUM: cpufreq: interactive: fix race 
   dc72ff7/Tue Dec 18 17:50:44 2012 -0800/CHROMIUM: cpufreq: interactive: fix racy 
@@ -129,7 +141,7 @@ baaa2c5
 8d38eadb7a97f265f7b3a9e8a30df358c3a546c8 [PATCH] mmtimer build fix
 1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 Linux-2.6.12-rc2
 
-#!/bin/bash -x
+#!/bin/bash 
 n=44900
 while true
 do
@@ -158,10 +170,73 @@ use dec 200, 100, 20, 10, 1 ...: it starts to be fast at around 4000..2000
 finishes last 1814 in one run.
 but it keeps failing: git push --tags origin2
 
+all tags: 
+    v3.0.1 v3.0.2 v3.0.3 v3.0.4 v3.0.5 v3.0.6 v3.0.7 v3.0.8
+    v3.2 v3.3 v3.4-rc1 v3.4-rc4 v3.4-rc5 v3.4-rc6 v3.4-rc7
+    v3.5 v3.6 v3.7 v3.7-rc8 v3.8 v3.8.11
+    v3.10 v3.10.1 v3.10.7
+    priv-master
+    priv-chrome38sep2
+
+tag v3.10 onwards failed to push.
+
+see a-setup/script-repopush-batch.sh for the batch-pushing. 
+it did push the repo to github in 121 minutes.
+
 
 reference links
 =================
 
   http://code.google.com/p/chromebook-linux/source/browse/a-setup/note-tips
   http://www.chromium.org/chromium-os
+
+
+redo pusing to github the master and chromeos-kernel-branch
+=============================================================
+
+clone kernel-next and checkout origin/chromeos-3.8 
+create local branch: "git checkout -b chromeos-3.8"
+switch to master branch: "git checkout master"
+
+  git remote add origin3 https://github.com/.../chromeos-kernel-3-8.git
+
+  [kernel-next]$ git log -1 master~34682
+     commit 1da177e4c3f41524e886b7f1b8a0c1fc7321cac2
+     Author: Linus Torvalds <torvalds@ppc970.osdl.org>
+     Date:   Sat Apr 16 15:20:36 2005 -0700
+         Linux-2.6.12-rc2
+
+the bottom of master is around:
+    8d38eadb7a97f265f7b3a9e8a30df358c3a546c8 [PATCH] mmtimer build fix
+    1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 Linux-2.6.12-rc2
+
+  git push origin3 master~34682:refs/heads/master
+  --it takes 16413 objects/49MiB/8min
+  --then ~34681, ~27000, ~18000, ~9000, ~1
+  --takes 4/522b/0, 44507/41/7, 62710/25/9m18s, 74504/66/11.5, 128k/142/20.
+  --last push failed at rpc rewind, but everything looks fine.
+  --then pushed master. push tags of 301MiB, fail rpc rewind again.
+  --increase http.postBuffer to 524288000, push again, 12M/min. fail tags rpc. 
+  -- push w --force --tags ~27000/~18000/~9000/~1/master, everything up to date. 
+
+the top of master is around:
+    commit 9fe6206f400646a2322096b56c59891d530e8d51
+    commit 77a63f3d1e0a3e7ede8d10f569e8481b13ff47c5
+
+switch to chromeos-3.8 branch. set push.default current. push to github. 
+  --only 10.59Mib/7638 objects. 
+
+the top of chromeos-3.8 branch is at:
+   98d6fa96d08dbb08a2150dcd48a6b2a8773172e0 exynos5420: devfreq: Remove aclk333
+   d4e407dfb5bea11f4aa844f8a3c7aa7d68d139ae CHROMIUM: cpufreq: interactive: fix
+
+check out from github.com/me/chromeos-kernel-3-8. 
+compare chromeos-3.8 branch, all files match. 
+
+copy the source code into a new project chromeos-kernel-3-8-work. tag tagw00.
+   .git size: 275M, push 44610 objects/121MiB/7m42s at 580KiB/s.
+
+clone and compare files. add missing files by .gitignore. re-tag with tagw00. 
+update and compare again. all files match. 
+
 
