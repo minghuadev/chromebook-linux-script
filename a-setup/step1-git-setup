@@ -1,6 +1,8 @@
 
 
-~/.netrc with machine credentials
+~/.netrc with machine credentials:
+
+ machine code.google.com login <login-name> password <password>
 
 
 ref: http://stackoverflow.com/questions/3562095/using-curl-to-get-a-https-webpage-in-windows-7
