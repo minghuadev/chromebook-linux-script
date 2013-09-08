@@ -1,0 +1,73 @@
+
+kernel-build-links
+
+
+
+Olof Johansson: Nov 20, 2012 building your own kernel and installing it...
+https://plus.google.com/109993695638569781190/posts/34PYU79eUqP
+
+
+chromebook-linux.com: compiling custom kernel on chromebook
+http://www.chromebook-linux.com/2011/11/compiling-your-custom-kernel-on.html
+
+  It mentions singing your own kernel with a efi bootstub from chroot...
+
+  vbutil_kernel –pack kern.bin \
+      --keyblock /usr/share/vboot/devkeys/kernel.keyblock \
+      --signprivate /usr/share/vboot/devkeys/kernel_data_key.vbprivk \
+      --version 1 \
+      --config config.txt \
+      --vmlinuz bzImage \
+      --bootloader /lib64/bootstub/bootstub.efi
+
+
+Debian User Forum: Howto run debian sid on acer c710 chromebook
+http://forums.debian.net/viewtopic.php?f=16&t=105713
+
+  Reuse the stock kernel and repack
+
+
+Superuser: How to load kernel 3.8.0-16 instead of 3.4.0
+http://superuser.com/questions/583269/chrubuntu-acer-how-to-load-kernel-3-8-0-16-instead-3-4-0
+
+  Build a new kernel and pack, without efi bootstub
+
+
+Unix
+I need a step by step guid to build kernel modules in ChrUbuntu
+http://unix.stackexchange.com/questions/75565/i-need-a-step-by-step-guide-to-build-kernel-modules-in-chrubuntu
+
+  Identical to the 3.8.0 script, but 3.4.0.
+
+
+Archlinux: Acer C7 Chromebook
+https://wiki.archlinux.org/index.php/Acer_C7_Chromebook
+
+  Installing ChrUbuntu, then archlinux but reusing chrubuntu kernel.
+
+  Reducing boot time by reflashing bios
+    -Save old bios:
+        # cd ~/Downloads
+        # shell
+        # sudo -s
+        # flashrom -r bios.bin # Back up old BIOS
+        # gbb_utility –set –flags=0×01 bios.bin bios.new # Modifies the BIOS as needed
+    -Short the bios write protect jumper
+    -Flash the modified rom:
+        # flashrom” again – “flashrom -w bios.new # Flashes the modified BIOS
+    -See the link below.
+
+
+John Lewis: Neutering the developer screen on your chromebook
+http://johnlewis.ie/neutering-the-developer-mode-screen-on-your-chromebook/
+
+  Use Bus Pirate and Pomona soic clip to unbrick. 
+
+
+chromium.org: Custom Firmware
+http://www.chromium.org/chromium-os/developer-information-for-chrome-os-devices/custom-firmware
+
+  H2C and Coreboot.
+  Singing can use a dummy bootstub file.
+
+
