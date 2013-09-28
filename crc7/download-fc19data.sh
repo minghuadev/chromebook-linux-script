@@ -83,6 +83,10 @@ file2=conf-fc19lxde-sha1
 file3=conf-filelist
 lastonetwo=bd
 
+echo '4a70550c1752c6b771c72d7f2363cf48ddf5c3d5  combine.sh' > data/conf-3files-sha1
+echo 'edb6c06bab4cec0959af3a1c0f231ba8c1ce3754  conf-filelist' >> data/conf-3files-sha1
+echo 'adb01a1982b6986aff63e0ac969d44af5884d016  conf-fc19lxde-sha1' >> data/conf-3files-sha1
+
 starttime=`date +%s`; startdate=`date`
 
     echo -e "\n #####################################################"
@@ -91,6 +95,11 @@ starttime=`date +%s`; startdate=`date`
     if [ $cfg_reusefile -eq 0 -o ! -f data/$file1 ] ; then dlplainfile $file1; fi
     if [ $cfg_reusefile -eq 0 -o ! -f data/$file3 ] ; then dlplainfile $file3; fi
     if [ $cfg_reusefile -eq 0 -o ! -f data/$file2 ] ; then dlshafile   $file2; fi
+    if ! (cd data && sha1sum -c conf-3files-sha1) ; then 
+        echo "Error checking sha1sums on the files."
+        rm $file1 $file2 $file3
+        exit 1
+    fi
     
 # Download fc19lxde root filesystem, keep track of successful parts so we can resume
 for one in a b; do
@@ -125,16 +134,19 @@ done
     
     if [ $cfg_reusefile -ne 0 ] ; then
         if [ ! -f data/fc19lxde.tgz ]; then
-            (cd data && chmod u+x combine.sh && ./combine.sh)
+            echo "Combine segments into the tarball..."
+            (cd data && chmod u+x combine.sh && bash combine.sh)
         fi
     else
-        (cd data && chmod u+x combine.sh && ./combine.sh)
-    fi
+        echo "Combine segments into the tarball..."
+        (cd data && chmod u+x combine.sh && bash combine.sh)
+    fi 
+    echo "Check the sha1sum on the tarball..."
     (cd data && sha1sum -c conf-fc19lxde-sha1)
     if [ $? -eq 0 ]; then 
-        echo -e "   Check:  OK \n"
+        echo -e "   Check:  OK "
     else
-        echo -e "   Check:  Failed. File not useable. \n"
+        echo -e "   Check:  Failed. Files not useable. "
     fi
 
 finishtime=`date +%s`; finishdate=`date`
