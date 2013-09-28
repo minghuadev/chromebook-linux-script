@@ -33,7 +33,8 @@ if [ ! -d data ]; then mkdir data; fi
     function dlshafile() {
         fn=$1
         if [ "$fn" == "" ]; then 
-            echo -e "\nError no file name in dlshafile\n\n"; exit 1
+            echo -e "\nError no file name in dlshafile\n\n"; 
+            exit 1
         fi
         correct_sha1_is_valid=0
         while [ $correct_sha1_is_valid -ne 1 ]; do
@@ -56,15 +57,17 @@ if [ ! -d data ]; then mkdir data; fi
         fn=$1
         shafn=$2
         if [ "$fn" == "" -o "$shafn" == "" ]; then 
-            echo -e "\nError no file name in dldatafile\n\n"; exit 1
+            echo -e "\nError no file name in dldatafile\n\n"; 
+            exit 1
         fi
         get_cmd="wget -O data/$fn $baselink/$fn"
         write_is_valid=0
         while [ $write_is_valid -ne 1 ]; do
             $get_cmd 
+            echo -n '            '
             (cd data && sha1sum -c $shafn)
             if [ $? -eq 0 ]; then
-                echo -e "\n$fn was downloaded correctly...\n\n"
+                echo -e "\n            $fn was downloaded correctly..."
                 write_is_valid=1
             else
                 echo -e -n "\nError downloading $fn. "
@@ -82,51 +85,42 @@ lastonetwo=bd
 
 starttime=`date +%s`; startdate=`date`
 
-    echo -e "\n\n #####################################################"
+    echo -e "\n #####################################################"
     echo -e "   Files:  $file1 $file2 $file3\n"
 
-    if [ $cfg_reusefile -ne 0 ] ; then
-        if [ ! -f $file1 ] ; then dlplainfile $file1; fi
-        if [ ! -f $file3 ] ; then dlplainfile $file3; fi
-        if [ ! -f $file2 ] ; then dlshafile   $file2; fi
-    else
-        dlplainfile $file1
-        dlplainfile $file3
-        dlshafile   $file2
-    fi
+    if [ $cfg_reusefile -eq 0 -o ! -f data/$file1 ] ; then dlplainfile $file1; fi
+    if [ $cfg_reusefile -eq 0 -o ! -f data/$file3 ] ; then dlplainfile $file3; fi
+    if [ $cfg_reusefile -eq 0 -o ! -f data/$file2 ] ; then dlshafile   $file2; fi
     
 # Download fc19lxde root filesystem, keep track of successful parts so we can resume
 for one in a b; do
   for two in a b c d e f g h i j k l m n o p q r s t u v w x y z; do
 
-    echo -e "\n\n #####################################################"
-    echo -e "   File:  $one $two \n"
+    echo -e "\n #####################################################"
+    echo -e "   File:  $one $two"
 
     sumfile="fc19lxde-"$one$two"-sha1"
     datafile="fc19lxde-"$one$two
     
-    if [ $cfg_reusefile -ne 0 ] ; then
-        if [ -f data/$sumfile -a -f data/$datafile ]; then
-            (cd data && sha1sum -c $sumfile)
-            if [ $? -ne 0 ]; then
-                dlshafile $sumfile
-                dldatafile $datafile $sumfile
+    while true ; do
+        if [ $cfg_reusefile -ne 0 ] ; then
+            if [ -f data/$sumfile -a -f data/$datafile ]; then
+                echo -n '                '
+                if (cd data && sha1sum -c $sumfile) ; then break; fi
             fi
-        else
-            dlshafile $sumfile
-            dldatafile $datafile $sumfile
         fi
-    else
         dlshafile $sumfile
         dldatafile $datafile $sumfile
-    fi
+        if [ -f data/fc19lxde.tgz ]; then rm data/fc19lxde.tgz; fi
+        break;
+    done
 
     # last file is ...
     if [ "$one$two" == "$lastonetwo" ]; then break;  fi
   done
 done
 
-    echo -e "\n\n #####################################################"
+    echo -e "\n #####################################################"
     echo -e "   Check:  \n"
     
     if [ $cfg_reusefile -ne 0 ] ; then
@@ -144,8 +138,9 @@ done
     fi
 
 finishtime=`date +%s`; finishdate=`date`
+seconds=$(($finishtime - $starttime))
 
-echo -e -n "\n\nSuccess downloading all files. seconds $seconds\n"
+echo -e -n "\nSuccess downloading all files in $seconds seconds.\n"
 echo "  start time: $startdate"
 echo " finish time: $finishdate"
 
