@@ -96,6 +96,7 @@ fi
 
 setterm -blank 0
 
+    echo "Check data/$rootfsfile..."
     (cd data && sha1sum -c conf-fc19lxde-sha1)
     if [ $? -ne 0 ]; then
         echo "Error sah1sum check rootfs file data/$rootfsfile"
