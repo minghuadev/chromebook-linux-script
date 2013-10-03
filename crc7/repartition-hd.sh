@@ -1,7 +1,7 @@
 #!/bin/bash
 #derived from install-ubuntu-1204-9.sh
 
-cfg_skip_diskwork=1 #set to 0 to do the real work
+cfg_skip_diskwork=0 #set to 0 to do the real work
 
 # fw_type will always be developer for Mario.
 # Alex and ZGB need the developer BIOS installed though.
@@ -53,7 +53,7 @@ setterm -blank 0
 
   croot_begin="`cgpt show -i 7 -n -b -q ${target_disk}`"
   croot_size="`cgpt show -i 7 -n -s -q ${target_disk}`"
-  croot_next=$(($croot_begin + $croot_next))
+  croot_next=$(($croot_begin + $croot_size))
 
   sectbl_begin="`cgpt show ${target_disk} | grep 'Sec GPT table' | xargs | cut -d' ' -f1`"
 

@@ -86,7 +86,7 @@ fi
 
 setterm -blank 0
 
-    (cd data && sha1sum -c data/conf-fc19lxde-sha1)
+    (cd data && sha1sum -c conf-fc19lxde-sha1)
     if [ $? -ne 0 ]; then
         echo "Error sah1sum check rootfs file data/$rootfsfile"
         echo "    Please try delete directory data and re-download data"
@@ -123,7 +123,7 @@ echo ""
 installstarttime=`date`
 date
 
-if [ grep $target_rootfs /proc/mounts ]; then 
+if grep $target_rootfs /proc/mounts ; then 
     echo "ERROR: $target_rootfs mounted"
     exit 1
 fi
