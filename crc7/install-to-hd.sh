@@ -257,27 +257,25 @@ echo "  Installation finished at $installfinishtime"
 
 # reboot
 echo ""
-echo "reboot now"
-exit 0
-
+echo "going to reboot"
 
 echo ""
 echo "Things to do with the minimal fedora 19 lxde environment: "
 
 echo ""
-echo "  Install pkgs: tar net-tools openssh-server system-config-firewall-tui"
-echo "  Disable fw:   systemctl stop firewalld.service"
+echo "  Change root password. it is set to root temporary now."
+echo "  Change user password. it is set to user temporary now."
 echo ""
-echo "  Or get a new image from scratch to have a minimal Fedora with only LXDE:"
-echo "    - use Netinstall image"
-echo "    - chose minimal and customise now, then only 4 bundle of packages: "
-echo "      LXDE and Window managers, and in base system Fonts and X Window System"
+echo "  Install KDE with:          yum install kde-workspace "
+echo "  Install touchpad package:  yum install kcm_touchpad  "
+echo "  Install KDE network manager:    "
+echo "                             yum install kde-plasma-networkmanagement  "
 
 echo ""
 echo "sleep 10"
 sleep 10
 echo ""
-##reboot
+reboot
 
 exit 0
 
