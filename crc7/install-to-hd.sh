@@ -42,6 +42,16 @@ rootfsfile=fc19lxde.tgz
       echo "  waitforflush finished  $finfinish"
     }
 
+if grep bash /proc/$$/exe > /dev/null ; then
+    echo good running from bash
+else
+    echo
+    echo Bad running from non-bash
+    echo Please use bash to run this script.
+    echo
+    exit 1
+fi
+
 echo ""
 fw_type="`crossystem mainfw_type`"
 if [ ! "$fw_type" = "developer" ]; then

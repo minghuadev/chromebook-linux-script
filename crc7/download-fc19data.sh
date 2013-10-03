@@ -7,6 +7,16 @@
 baselink=http://chromebook-linux-data-fc19lxde.googlecode.com/git/data-acer-c7
 cfg_reusefile=1
 
+if grep bash /proc/$$/exe > /dev/null ; then
+    echo good running from bash
+else
+    echo
+    echo Bad running from non-bash
+    echo Please use bash to run this script.
+    echo
+    exit 1
+fi
+
 #create data/
 if [ ! -d data ]; then mkdir data; fi
 

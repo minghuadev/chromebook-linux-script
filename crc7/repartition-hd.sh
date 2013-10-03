@@ -3,6 +3,16 @@
 
 cfg_skip_diskwork=0 #set to 0 to do the real work
 
+if grep bash /proc/$$/exe > /dev/null ; then
+    echo good running from bash
+else
+    echo
+    echo Bad running from non-bash
+    echo Please use bash to run this script.
+    echo
+    exit 1
+fi
+
 # fw_type will always be developer for Mario.
 # Alex and ZGB need the developer BIOS installed though.
 fw_type="`crossystem mainfw_type`"
