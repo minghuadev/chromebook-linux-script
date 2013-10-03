@@ -7,8 +7,8 @@ installation steps:
 [1] boot into developer mode. switch to console 2 with ctrl-alt-f2. 
     login as chronos user.
 
-[2] download "repartition-hd.sh". run by "bash repartition-hd.sh" to 
-    repartition the hard drive. it shall shrink the /dev/sda1 stateful 
+[2] download "hd-repartition.sh". run by "bash hd-repartition.sh" 
+    to repartition the hard drive. it shall shrink the /dev/sda1 stateful 
     partition to make space for fedora kernel on /dev/sda6 and the rootfs 
     on /dev/sda7 partition. if it detects sda1, sda6, sda7 are contineous 
     it shall re-arrange the partitions to the new size you choose.
@@ -25,7 +25,7 @@ installation steps:
     it shall download the rootfs data segment files into "data" directory. 
     when done it shall combine them into one .tgz file for installation use. 
 
-[6] download "install-to-hd.sh". run by "bash install-to-hd.sh". it shall 
+[6] download "hd-install.sh". run by "bash hd-install.sh". it shall 
     install fc19 with the following actions: 
 
       copy the current chromeos kernel 3.4 image from sda2 or sda4, 
@@ -47,7 +47,7 @@ installation steps:
       Install KDE network manager: 
                                  yum install kde-plasma-networkmanagement  
 
-    the lxde also also prompts to setup ClipIt. 
+    the lxde also prompts to setup ClipIt. 
 
 
 tips: hit control-c to break the script at any time if things go wrong. 

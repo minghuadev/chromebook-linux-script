@@ -1,20 +1,18 @@
 #!/bin/bash
-#make sure it runs from bash on chronos 
+#hd-install.sh 
+# derived from install-ubuntu-1204-9.sh of chrubuntu
+# to be run on an acer c7 installing from a usb stick to hd, 
+# or from hd to hd.
 
 # fw_type will always be developer for Mario.
 # Alex and ZGB need the developer BIOS installed though.
 
-#install-to-hd.sh 
-#install-to-usb.sh derived from install-ubuntu-1204-9.sh
-#to be run on an acer c7 installing from a usb stick to hd, 
-#or from hd to usb stick, or from hd to hd.
-
 cfg_install_to=/dev/sda
 
-debug_skip_mkfs=0    #1 skip writing rootfs partition from files
-debug_skip_rootfs=0  #1 skip writing rootfs partition from files
+debug_skip_mkfs=0    #1 skip creating ext4 fs on rootfs partition 
+debug_skip_rootfs=0  #1 skip writing rootfs partition files
 debug_skip_modules=0 #1 skip extracting module files
-debug_show_mkfs=1    #1 skip showing mkfs result
+debug_show_mkfs=0    #0 skip showing mkfs result
 
 rootfsfile=fc19lxde.tgz
 
@@ -42,6 +40,7 @@ rootfsfile=fc19lxde.tgz
       echo "  waitforflush finished  $finfinish"
     }
 
+#make sure it runs from bash on chronos 
 if grep bash /proc/$$/exe > /dev/null ; then
     echo good running from bash
 else
@@ -52,6 +51,7 @@ else
     exit 1
 fi
 
+#check developer mode
 echo ""
 fw_type="`crossystem mainfw_type`"
 if [ ! "$fw_type" = "developer" ]; then
@@ -148,7 +148,7 @@ if [ $debug_skip_mkfs -eq 0 ]; then
     fi
 fi
 
-#Mount rootfs and copy cgpt + modules over
+#Mount rootfs and copy cgpt and modules over
 echo "Mounting ${target_rootfs}..."
 if [ ! -d /tmp/urfs ]; then
     mkdir /tmp/urfs
@@ -270,9 +270,9 @@ echo "  Install KDE with:          yum install kde-workspace "
 echo "  Install touchpad package:  yum install kcm_touchpad  "
 echo "  Install KDE network manager:    "
 echo "                             yum install kde-plasma-networkmanagement  "
-
 echo ""
-echo "sleep 10"
+
+echo "sleep 10 seconds ... then reboot"
 sleep 10
 echo ""
 reboot

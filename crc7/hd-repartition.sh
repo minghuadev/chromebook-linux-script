@@ -1,5 +1,6 @@
 #!/bin/bash
-#derived from install-ubuntu-1204-9.sh
+#hd-repartition.sh
+#derived from install-ubuntu-1204-9.sh of chrubuntu
 
 cfg_skip_diskwork=0 #set to 0 to do the real work
 
