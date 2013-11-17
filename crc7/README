@@ -53,4 +53,10 @@ installation steps:
 tips: hit control-c to break the script at any time if things go wrong. 
       the scripts and data can be kept on a usb drive for later use.
 
+      for windows remote desktop over cisco vpn, install:
+             kde-plasma-networkmanagement-vpnc, rdesktop
+
+      for pdf and audio mixer, install:
+             okular, kmix
+
 
