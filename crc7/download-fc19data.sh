@@ -4,7 +4,7 @@
 # from install-ubuntu-1204-9.sh
 #to be run on a host just to save all the files to data/.
 
-baselink=https://raw.githubusercontent.com/mateoantonio/chromebook-linux-data-fc19lxde/master/data-acer-c7
+baselink=http://chromebook-linux-data-fc19lxde.googlecode.com/git/data-acer-c7
 cfg_reusefile=1
 
 if grep bash /proc/$$/exe > /dev/null ; then
